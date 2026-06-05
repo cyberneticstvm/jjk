@@ -1,0 +1,54 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --color-sandal: #f5ead7;
+    --color-parchment: #fcf8ef;
+    --color-saffron: #c77720;
+    --color-maroon: #681f27;
+    --color-forest: #173f32;
+    --color-gold: #d3a64b;
+    --color-ink: #28231f;
+}
+
+@layer base {
+    html { scroll-behavior: smooth; }
+    body { @apply bg-parchment text-ink antialiased; }
+    h1, h2, h3, h4 { @apply font-serif; }
+    ::selection { @apply bg-saffron text-white; }
+}
+
+@layer components {
+    .container-site { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12; }
+    .eyebrow { @apply mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[.22em] text-saffron; }
+    .eyebrow::before { content: ''; @apply block h-px w-8 bg-saffron; }
+    .section-title { @apply font-serif text-4xl font-semibold leading-[1.05] text-forest sm:text-5xl; }
+    .btn-primary { @apply inline-flex items-center justify-center rounded-full bg-maroon px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-maroon/15 transition hover:-translate-y-0.5 hover:bg-forest focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2; }
+    .btn-light { @apply inline-flex items-center justify-center rounded-full border border-white/50 bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-maroon; }
+    .card { @apply rounded-3xl border border-saffron/10 bg-white p-7 shadow-[0_18px_60px_rgba(72,48,30,.08)]; }
+    .nav-link { @apply relative text-sm font-semibold text-ink/75 transition hover:text-maroon; }
+    .nav-link.active { @apply text-maroon; }
+    .nav-link.active::after { content: ''; @apply absolute -bottom-2 left-0 h-0.5 w-full bg-saffron; }
+    .prose-jjk { @apply text-[1.04rem] leading-8 text-ink/75; }
+    .prose-jjk p + p { @apply mt-5; }
+}
+
+.mandala-bg {
+    background-image: radial-gradient(circle at center, transparent 0 28%, rgba(199,119,32,.08) 28.5% 29%, transparent 29.5% 42%, rgba(199,119,32,.06) 42.5% 43%, transparent 43.5%),
+    repeating-conic-gradient(from 0deg, rgba(199,119,32,.045) 0deg 2deg, transparent 2deg 15deg);
+}
+
+.hero-slide { opacity: 0; pointer-events: none; transition: opacity .9s ease; }
+.hero-slide.is-active { opacity: 1; pointer-events: auto; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    .reveal { opacity: 1; transform: none; }
+}
