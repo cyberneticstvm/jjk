@@ -12,7 +12,9 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('images/gurukulam-hero.png') }}">
     <link rel="canonical" href="{{ url()->current() }}">
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/jjk-logo.png') }}?v=2">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('images/jjk-logo.png') }}?v=2">
+    <link rel="apple-touch-icon" href="{{ asset('images/jjk-logo.png') }}?v=2">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script type="application/ld+json">
     {
@@ -29,14 +31,14 @@
 </head>
 <body>
     <a href="#main-content" class="fixed left-4 top-3 z-[100] -translate-y-20 bg-white px-4 py-2 font-bold text-maroon focus:translate-y-0">Skip to content</a>
-    <div class="bg-forest py-2.5 text-center text-xs font-semibold tracking-wide text-white/80">
+    <div class="bg-forest py-3 text-center text-2xl font-semibold tracking-wide text-white/80">
         <span class="text-gold">ॐ</span> Tamaso Ma Jyotir Gamaya <span class="mx-2 text-white/30">|</span> Lead us from darkness to light
     </div>
     <header class="sticky top-0 z-50 border-b border-saffron/10 bg-parchment/95 backdrop-blur-xl">
         <div class="container-site flex h-20 items-center justify-between">
-            <a href="{{ route('home') }}" class="flex items-center gap-3" aria-label="JJK Gurukulam home">
-                <span class="grid size-11 place-items-center rounded-full border border-saffron/30 bg-sandal font-serif text-xl font-bold text-maroon">JJK</span>
-                <span><strong class="block font-serif text-xl leading-none text-maroon">JJK Gurukulam</strong><small class="mt-1 block text-[10px] font-bold uppercase tracking-[.2em] text-forest/60">Wisdom · Care · Seva</small></span>
+            <a href="{{ route('home') }}" class="flex min-w-0 items-center gap-3" aria-label="JJK Gurukulam home">
+                <img src="{{ asset('images/jjk-logo.png') }}" alt="JJK Gurukulam emblem" class="h-16 w-[70px] shrink-0 object-contain" width="70" height="64">
+                <span><strong class="block font-serif text-xl leading-none text-maroon">Janaka Janani Kripa Gurukulam</strong><small class="mt-1 block text-[10px] font-bold uppercase tracking-[.2em] text-forest/60">Wisdom · Care · Seva</small></span>
             </a>
             <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
                 <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
@@ -45,7 +47,7 @@
                 <a class="nav-link {{ request()->routeIs('courses') ? 'active' : '' }}" href="{{ route('courses') }}">Courses</a>
                 <a class="nav-link {{ request()->routeIs('teachers') ? 'active' : '' }}" href="{{ route('teachers') }}">Teachers</a>
                 <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
-                <a class="btn-primary !px-5 !py-2.5" href="{{ route('support') }}">Support a Child</a>
+                <a class="btn-primary !px-5 !py-2.5" href="{{ route('support') }}">Support Us</a>
             </nav>
             <button data-menu-button class="grid size-11 place-items-center rounded-full border border-maroon/15 text-maroon lg:hidden" aria-expanded="false" aria-label="Open menu">
                 <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>

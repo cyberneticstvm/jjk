@@ -4,9 +4,9 @@
 @section('content')
 <section class="relative min-h-[720px] overflow-hidden bg-forest text-white">
     @foreach([
-        ['images/gurukulam-hero.png','A traditional Kerala Gurukulam at sunrise','A Home of Learning. A Life of Values.','We nurture children with education, care and the timeless wisdom of Indian culture.','gurukulam'],
-        ['images/shanti-nilayam-hero.png','Shanti Nilayam retreat among Kerala paddy fields','Return to the Peace Within.','Study Yoga, Vedanta and Sanskrit in the quiet, natural surroundings of Shanti Nilayam.','shanti'],
-        ['images/vedanta-study.png','Traditional Vedanta class in a Gurukulam','Ancient Wisdom for Modern Life.','Authentic teaching in the lineage of Swami Dayananda Saraswati.','courses']
+        ['images/slide1.jpeg','A traditional Kerala Gurukulam at sunrise','A Home of Learning. A Life of Values.','We nurture children with education, care and the timeless wisdom of Indian culture.','gurukulam'],
+        ['images/slide2.jpeg','Shanti Nilayam retreat among Kerala paddy fields','Return to the Peace Within.','Study Yoga, Vedanta and Sanskrit in the quiet, natural surroundings of Shanti Nilayam.','shanti'],
+        ['images/slide3.jpeg','Traditional Vedanta class in a Gurukulam','Ancient Wisdom for Modern Life.','Authentic teaching in the lineage of Swami Dayananda Saraswati.','courses']
     ] as $i => $slide)
     <article data-slide class="hero-slide {{ $i === 0 ? 'is-active' : '' }} absolute inset-0">
         <img src="{{ asset($slide[0]) }}" alt="{{ $slide[1] }}" class="h-full w-full object-cover" fetchpriority="{{ $i === 0 ? 'high' : 'auto' }}">
@@ -45,7 +45,7 @@
             <a href="{{ route('gurukulam') }}" class="mt-8 inline-flex font-bold text-maroon">Our story and daily life <span class="ml-2">→</span></a>
         </div>
         <div class="reveal relative">
-            <div class="overflow-hidden rounded-[2rem]"><img src="{{ asset('images/gurukulam-hero.png') }}" alt="Children learning with a teacher at the Gurukulam" class="aspect-[4/3] w-full object-cover"></div>
+            <div class="overflow-hidden rounded-[2rem]"><img src="{{ asset('images/who-we-are.jpeg') }}" alt="Children learning with a teacher at the Gurukulam" class="aspect-[4/3] w-full object-cover"></div>
             <div class="absolute -bottom-8 -left-5 rounded-2xl bg-maroon p-6 text-white shadow-xl sm:-left-10"><strong class="block font-serif text-4xl">2006</strong><span class="text-xs uppercase tracking-[.18em] text-white/70">Our journey began</span></div>
         </div>
     </div>
@@ -55,8 +55,8 @@
     <div class="container-site">
         <div class="reveal mx-auto max-w-2xl text-center"><div class="eyebrow justify-center before:hidden">One vision, two sacred spaces</div><h2 class="section-title">Care in action. Wisdom in practice.</h2></div>
         <div class="mt-12 grid gap-7 lg:grid-cols-2">
-            <a href="{{ route('gurukulam') }}" class="reveal group relative min-h-[480px] overflow-hidden rounded-[2rem] text-white"><img src="{{ asset('images/gurukulam-hero.png') }}" alt="" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-[#102d25] via-transparent"></div><div class="absolute inset-x-0 bottom-0 p-8 sm:p-10"><span class="text-xs font-bold uppercase tracking-[.2em] text-gold">Thiruvananthapuram</span><h3 class="mt-2 text-4xl font-semibold">JJK Children's Gurukulam</h3><p class="mt-3 max-w-md text-white/75">A loving home where education, discipline and character grow together.</p></div></a>
-            <a href="{{ route('shanti') }}" class="reveal group relative min-h-[480px] overflow-hidden rounded-[2rem] text-white"><img src="{{ asset('images/shanti-nilayam-hero.png') }}" alt="" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-maroon via-transparent"></div><div class="absolute inset-x-0 bottom-0 p-8 sm:p-10"><span class="text-xs font-bold uppercase tracking-[.2em] text-gold">Thrissur</span><h3 class="mt-2 text-4xl font-semibold">Shanti Nilayam</h3><p class="mt-3 max-w-md text-white/75">An abode of peace for traditional Yoga, Vedanta, Sanskrit and self-discovery.</p></div></a>
+            <a href="{{ route('gurukulam') }}" class="reveal group relative min-h-[480px] overflow-hidden rounded-[2rem] text-white"><img src="{{ asset('images/location1.jpeg') }}" alt="" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-[#102d25] via-transparent"></div><div class="absolute inset-x-0 bottom-0 p-8 sm:p-10"><span class="text-xs font-bold uppercase tracking-[.2em] text-gold">Thiruvananthapuram</span><h3 class="mt-2 text-4xl font-semibold">JJK Children's Gurukulam</h3><p class="mt-3 max-w-md text-white/75">A loving home where education, discipline and character grow together.</p></div></a>
+            <a href="{{ route('shanti') }}" class="reveal group relative min-h-[480px] overflow-hidden rounded-[2rem] text-white"><img src="{{ asset('images/location2.jpeg') }}" alt="" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-maroon via-transparent"></div><div class="absolute inset-x-0 bottom-0 p-8 sm:p-10"><span class="text-xs font-bold uppercase tracking-[.2em] text-gold">Thrissur</span><h3 class="mt-2 text-4xl font-semibold">Shanti Nilayam</h3><p class="mt-3 max-w-md text-white/75">An abode of peace for traditional Yoga, Vedanta, Sanskrit and self-discovery.</p></div></a>
         </div>
     </div>
 </section>

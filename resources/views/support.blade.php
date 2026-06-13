@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Support a Child | Donate to JJK Gurukulam Trust')
+@section('title', 'Support Us | Donate to JJK Gurukulam Trust')
 @section('description', 'Support meals, education, clothing and care for children at JJK Gurukulam Trust. View sponsorship options and verified bank details.')
 @section('content')
 @include('partials.page-hero',['eyebrow'=>'Compassion in action','title'=>'Help a child step into the light.','intro'=>'Your contribution sustains education, nutrition, healthcare and a secure home for children who deserve the opportunity to thrive.','image'=>'images/gurukulam-hero.png','alt'=>'Children studying at a Kerala Gurukulam'])
