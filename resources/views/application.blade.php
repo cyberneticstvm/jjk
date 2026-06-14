@@ -26,7 +26,7 @@
                 </div>
             @endif
 
-            <form action="{{ route('application.store') }}" method="POST" enctype="multipart/form-data" class="space-y-8">
+            <form action="{{ url('/retreat-application') }}" method="POST" enctype="multipart/form-data" class="space-y-8">
                 @csrf
 
                 <fieldset class="card !p-6 sm:!p-9">

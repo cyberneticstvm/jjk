@@ -81,8 +81,7 @@ class RetreatApplicationController extends Controller
             Storage::disk('local')->delete($photoPath);
         }
 
-        return redirect()
-            ->route('application.create')
+        return redirect('/retreat-application')
             ->with('success', 'Thank you. Your retreat application has been submitted successfully.');
     }
 }

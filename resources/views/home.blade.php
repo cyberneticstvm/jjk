@@ -8,7 +8,7 @@
         ['images/slider/Slider_2.jpg.jpeg', 'Shanti Nilayam retreat home among mature trees', 'Return to the Peace Within.', 'Study Yoga, Vedanta and Sanskrit in the quiet, natural surroundings of Shanti Nilayam.', 'shanti'],
         ['images/slider/Slider_3.jpg.jpeg', 'Traditional spiritual discourse for families and children', 'Ancient Wisdom for Modern Life.', 'Authentic teaching in the lineage of Swami Dayananda Saraswati.', 'courses'],
         ['images/slider/Slider_4.jpg.jpeg', 'Spacious traditional learning hall at Shanti Nilayam', 'A Space for Study and Reflection.', 'Step away from distraction and discover an atmosphere created for sincere learning, contemplation and inner growth.', 'shanti'],
-        ['images/slider/Slider_5.jpg.jpeg', 'Clean and welcoming dining hall at the retreat home', 'Simple Living. Wholesome Care.', 'Experience disciplined Ashrama living with nourishing vegetarian meals, thoughtful routines and compassionate hospitality.', 'application.create'],
+        ['images/slider/Slider_5.jpg.jpeg', 'Clean and welcoming dining hall at the retreat home', 'Simple Living. Wholesome Care.', 'Experience disciplined Ashrama living with nourishing vegetarian meals, thoughtful routines and compassionate hospitality.', null],
     ];
 @endphp
 <section class="relative min-h-[720px] overflow-hidden bg-forest text-white">
@@ -26,7 +26,7 @@
                 @endif
                 <p class="mt-7 max-w-xl text-lg leading-8 text-white/85">{{ $slide[3] }}</p>
                 <div class="mt-9 flex flex-wrap gap-3">
-                    <a class="btn-primary !bg-saffron hover:!bg-maroon" href="{{ route($slide[4]) }}">Discover more</a>
+                    <a class="btn-primary !bg-saffron hover:!bg-maroon" href="{{ $slide[4] ? route($slide[4]) : url('/retreat-application') }}">Discover more</a>
                     <a class="btn-light" href="{{ route('support') }}">Support our mission</a>
                 </div>
             </div>
