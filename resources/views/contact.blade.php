@@ -48,6 +48,7 @@
 
                 <div class="mt-7 space-y-3 border-t border-sandal pt-6">
                     <p><strong class="text-maroon">Telephone:</strong> <a class="transition hover:text-maroon hover:underline" href="tel:+914872967084">+91 487 2967084</a></p>
+                    <p><strong class="text-maroon">Mobile:</strong> <a class="transition hover:text-maroon hover:underline" href="tel:+919446177085">+91 9446177085</a></p>
                     <p><strong class="text-maroon">Email:</strong> <a class="transition hover:text-maroon hover:underline" href="mailto:jjkgurukulam@gmail.com">jjkgurukulam@gmail.com</a></p>
                 </div>
 

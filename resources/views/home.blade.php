@@ -2,12 +2,17 @@
 @section('title', 'JJK Gurukulam Trust | Education, Vedanta & Compassionate Service')
 @section('description', 'Discover JJK Gurukulam Trust in Kerala: a nurturing home for children and a traditional centre for Yoga, Vedanta, Sanskrit and spiritual retreats.')
 @section('content')
+@php
+    $heroSlides = [
+        ['images/slider/Slider_1.jpg.jpeg', 'JJK Gurukulam campus surrounded by greenery', 'A Home of Learning. A Life of Values.', 'We nurture children with education, care and the timeless wisdom of Indian culture.', 'gurukulam'],
+        ['images/slider/Slider_2.jpg.jpeg', 'Shanti Nilayam retreat home among mature trees', 'Return to the Peace Within.', 'Study Yoga, Vedanta and Sanskrit in the quiet, natural surroundings of Shanti Nilayam.', 'shanti'],
+        ['images/slider/Slider_3.jpg.jpeg', 'Traditional spiritual discourse for families and children', 'Ancient Wisdom for Modern Life.', 'Authentic teaching in the lineage of Swami Dayananda Saraswati.', 'courses'],
+        ['images/slider/Slider_4.jpg.jpeg', 'Spacious traditional learning hall at Shanti Nilayam', 'A Space for Study and Reflection.', 'Step away from distraction and discover an atmosphere created for sincere learning, contemplation and inner growth.', 'shanti'],
+        ['images/slider/Slider_5.jpg.jpeg', 'Clean and welcoming dining hall at the retreat home', 'Simple Living. Wholesome Care.', 'Experience disciplined Ashrama living with nourishing vegetarian meals, thoughtful routines and compassionate hospitality.', 'application.create'],
+    ];
+@endphp
 <section class="relative min-h-[720px] overflow-hidden bg-forest text-white">
-    @foreach([
-        ['images/slide1.jpeg','A traditional Kerala Gurukulam at sunrise','A Home of Learning. A Life of Values.','We nurture children with education, care and the timeless wisdom of Indian culture.','gurukulam'],
-        ['images/slide2.jpeg','Shanti Nilayam retreat among Kerala paddy fields','Return to the Peace Within.','Study Yoga, Vedanta and Sanskrit in the quiet, natural surroundings of Shanti Nilayam.','shanti'],
-        ['images/slide3.jpeg','Traditional Vedanta class in a Gurukulam','Ancient Wisdom for Modern Life.','Authentic teaching in the lineage of Swami Dayananda Saraswati.','courses']
-    ] as $i => $slide)
+    @foreach($heroSlides as $i => $slide)
     <article data-slide class="hero-slide {{ $i === 0 ? 'is-active' : '' }} absolute inset-0">
         <img src="{{ asset($slide[0]) }}" alt="{{ $slide[1] }}" class="h-full w-full object-cover" fetchpriority="{{ $i === 0 ? 'high' : 'auto' }}">
         <div class="absolute inset-0 bg-gradient-to-r from-[#102d25]/95 via-[#102d25]/70 to-transparent"></div>
@@ -15,9 +20,9 @@
             <div class="max-w-3xl pt-14">
                 <div class="mb-5 text-xs font-bold uppercase tracking-[.3em] text-gold">Janaka Janani Kripa Gurukulam Trust</div>
                 @if($i === 0)
-                    <h1 class="font-serif text-5xl font-semibold leading-[.95] sm:text-7xl lg:text-[5.5rem]">{{ $slide[2] }}</h1>
+                    <h1 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">{{ $slide[2] }}</h1>
                 @else
-                    <h2 class="font-serif text-5xl font-semibold leading-[.95] sm:text-7xl lg:text-[5.5rem]">{{ $slide[2] }}</h2>
+                    <h2 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">{{ $slide[2] }}</h2>
                 @endif
                 <p class="mt-7 max-w-xl text-lg leading-8 text-white/85">{{ $slide[3] }}</p>
                 <div class="mt-9 flex flex-wrap gap-3">
@@ -30,7 +35,7 @@
     @endforeach
     <div class="container-site absolute inset-x-0 bottom-8 z-20 flex items-center gap-5">
         <button data-slide-prev class="grid size-10 place-items-center rounded-full border border-white/30 hover:bg-white/10" aria-label="Previous slide">←</button>
-        <div class="flex gap-2">@for($i=0;$i<3;$i++)<button data-slide-dot class="h-2.5 w-8 rounded-full bg-white/40" aria-label="Show slide {{ $i+1 }}"></button>@endfor</div>
+        <div class="flex gap-2">@foreach($heroSlides as $i => $slide)<button data-slide-dot class="h-2.5 w-8 rounded-full bg-white/40" aria-label="Show slide {{ $i+1 }}"></button>@endforeach</div>
         <button data-slide-next class="grid size-10 place-items-center rounded-full border border-white/30 hover:bg-white/10" aria-label="Next slide">→</button>
     </div>
 </section>

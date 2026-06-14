@@ -68,7 +68,7 @@
                 <div class="font-serif text-3xl font-semibold text-white">JJK Gurukulam Trust</div>
                 <p class="mt-4 max-w-xl leading-7">A charitable trust nurturing children through education and Indian values, while sharing authentic Yoga, Vedanta and Sanskrit through the Guru–Shishya tradition.</p>
             </div>
-            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Retreat Home</a><a href="{{ route('courses') }}">Courses & Yaatras</a><a href="{{ route('teachers') }}">Our Teachers</a></div></div>
+            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Retreat Home</a><a href="{{ route('courses') }}">Courses & Yaatras</a><a href="{{ route('application.create') }}">Apply for Retreat</a><a href="{{ route('teachers') }}">Our Teachers</a></div></div>
             <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Connect</h2><div class="mt-5 grid gap-3 text-sm"><a href="mailto:jjkgurukulam@gmail.com">jjkgurukulam@gmail.com</a><span>Kerala, South India</span><a class="font-bold text-white" href="{{ route('support') }}">Make a contribution →</a></div></div>
         </div>
         <div class="border-t border-white/10 py-6"><div class="container-site flex flex-col gap-2 text-xs sm:flex-row sm:justify-between"><span>© {{ date('Y') }} JJK Gurukulam Trust. All rights reserved.</span><span>Lokah Samastah Sukhino Bhavantu</span></div></div>

@@ -55,3 +55,27 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+
+const locationSelect = document.querySelector('[data-location-select]');
+const otherLocation = document.querySelector('[data-other-location]');
+const otherLocationInput = otherLocation?.querySelector('input');
+
+function updateOtherLocation() {
+    const showOther = locationSelect?.value === 'Other';
+    otherLocation?.classList.toggle('hidden', !showOther);
+    if (otherLocationInput) {
+        otherLocationInput.required = showOther;
+    }
+}
+
+locationSelect?.addEventListener('change', updateOtherLocation);
+updateOtherLocation();
+
+const photoInput = document.querySelector('[data-photo-input]');
+const fileName = document.querySelector('[data-file-name]');
+
+photoInput?.addEventListener('change', () => {
+    if (fileName) {
+        fileName.textContent = photoInput.files?.[0]?.name ?? 'JPG, PNG or WebP, maximum 5 MB';
+    }
+});
