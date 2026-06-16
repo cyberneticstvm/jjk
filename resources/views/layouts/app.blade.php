@@ -45,7 +45,7 @@
                 <a class="nav-link {{ request()->routeIs('gurukulam') ? 'active' : '' }}" href="{{ route('gurukulam') }}">Gurukulam</a>
                 <a class="nav-link {{ request()->routeIs('shanti') ? 'active' : '' }}" href="{{ route('shanti') }}">Shanti Nilayam</a>
                 <a class="nav-link {{ request()->routeIs('courses') ? 'active' : '' }}" href="{{ route('courses') }}">Courses</a>
-                <a class="nav-link {{ request()->routeIs('teachers') ? 'active' : '' }}" href="{{ route('teachers') }}">Teachers</a>
+                <a class="nav-link {{ request()->routeIs('masters') ? 'active' : '' }}" href="{{ route('masters') }}">Masters</a>
                 <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
                 <a class="btn-primary !px-5 !py-2.5" href="{{ route('support') }}">Support Us</a>
             </nav>
@@ -55,7 +55,7 @@
         </div>
         <nav data-mobile-menu class="container-site hidden border-t border-saffron/10 py-5 lg:hidden" aria-label="Mobile navigation">
             <div class="grid gap-4 font-semibold text-forest">
-                <a href="{{ route('home') }}">Home</a><a href="{{ route('gurukulam') }}">Gurukulam</a><a href="{{ route('shanti') }}">Shanti Nilayam</a><a href="{{ route('courses') }}">Courses</a><a href="{{ route('teachers') }}">Teachers</a><a href="{{ route('support') }}">Support Us</a><a href="{{ route('contact') }}">Contact</a>
+                <a href="{{ route('home') }}">Home</a><a href="{{ route('gurukulam') }}">Gurukulam</a><a href="{{ route('shanti') }}">Shanti Nilayam</a><a href="{{ route('courses') }}">Courses</a><a href="{{ route('masters') }}">Masters</a><a href="{{ route('support') }}">Support Us</a><a href="{{ route('contact') }}">Contact</a>
             </div>
         </nav>
     </header>
@@ -68,7 +68,7 @@
                 <div class="font-serif text-3xl font-semibold text-white">JJK Gurukulam Trust</div>
                 <p class="mt-4 max-w-xl leading-7">A charitable trust nurturing children through education and Indian values, while sharing authentic Yoga, Vedanta and Sanskrit through the Guru–Shishya tradition.</p>
             </div>
-            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Retreat Home</a><a href="{{ route('courses') }}">Courses & Yaatras</a><a href="{{ url('/retreat-application') }}">Apply for Retreat</a><a href="{{ route('teachers') }}">Our Teachers</a></div></div>
+            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Retreat Home</a><a href="{{ route('courses') }}">Courses & Yaatras</a><a href="{{ url('/retreat-application') }}">Apply for Retreat</a><a href="{{ route('masters') }}">Masters</a></div></div>
             <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Connect</h2><div class="mt-5 grid gap-3 text-sm"><a href="mailto:jjkgurukulam@gmail.com">jjkgurukulam@gmail.com</a><span>Kerala, South India</span><a class="font-bold text-white" href="{{ route('support') }}">Make a contribution →</a></div></div>
         </div>
         <div class="border-t border-white/10 py-6"><div class="container-site flex flex-col gap-2 text-xs sm:flex-row sm:justify-between"><span>© {{ date('Y') }} JJK Gurukulam Trust. All rights reserved.</span><span>Lokah Samastah Sukhino Bhavantu</span></div></div>

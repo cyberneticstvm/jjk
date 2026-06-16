@@ -46,12 +46,24 @@
         <div class="reveal">
             <div class="eyebrow">Who we are</div>
             <h2 class="section-title">Lighting a candle in a child's life.</h2>
-            <div class="prose-jjk mt-7"><p>JJK Gurukulam Trust is a charitable and social service organization providing education, care and a nurturing home for boys from underprivileged and difficult family circumstances.</p><p>Since 2006, our Vattiyoorkavu Gurukulam has offered shelter, nutritious vegetarian food, formal schooling and value-based education in a secure, peaceful atmosphere.</p></div>
+            <div class="prose-jjk mt-7"><p>Welcome to Janaka Janani Kripa Gurukulam Trust (JJK Gurukulam Trust), a charitable and social service organization dedicated to providing education, care, and a nurturing home for children from underprivileged and dysfunctional families.</p></div>
+            <div class="prose-jjk mt-7"><p>We admit children from economically challenged backgrounds where often one or both parents are absent, or where difficult family circumstances prevent proper care and education for the child. Along with shelter, clothing, books, and nutritious vegetarian food, we provide value-based education in a safe and supportive environment. The children also attend nearby public schools for their formal education.</p></div>
             <a href="{{ route('gurukulam') }}" class="mt-8 inline-flex font-bold text-maroon">Our story and daily life <span class="ml-2">→</span></a>
         </div>
         <div class="reveal relative">
             <div class="overflow-hidden rounded-[2rem]"><img src="{{ asset('images/who-we-are.jpeg') }}" alt="Children learning with a teacher at the Gurukulam" class="aspect-[4/3] w-full object-cover"></div>
             <div class="absolute -bottom-8 -left-5 rounded-2xl bg-maroon p-6 text-white shadow-xl sm:-left-10"><strong class="block font-serif text-4xl">2006</strong><span class="text-xs uppercase tracking-[.18em] text-white/70">Our journey began</span></div>
+        </div>
+        <div class="reveal">
+            <div class="prose-jjk mt-7"><p>Our all-boys Gurukulam is located at Vattiyoorkavu in Thiruvananthapuram, Kerala, South India, and was established in 2006. Since then, many children have completed their stay at the Gurukulam and have greatly benefited from the guidance, care, and education provided here.</p></div>
+            <div class="prose-jjk mt-7"><p>At JJK Gurukulam, we strive to create a secure, peaceful, and congenial atmosphere where children can grow into confident, responsible, and capable individuals who are ready to participate successfully in society.</p></div>
+        </div>
+        <div class="reveal">
+            <div class="prose-jjk mt-7"><p>Along with formal education, the Gurukulam introduces children to the timeless values of Indian culture and spirituality, including dharma (righteous living), dhyana (meditation), and yoga (self-discipline and inner harmony).</p></div>
+            <div class="">Our guiding inspiration comes from the Upanishadic prayer:</div>
+            <div class="mt-8 inline-flex font-bold text-maroon">Tamaso Ma Jyotir Gamaya “Lead us from darkness to light”.</div>
+            <div class="prose-jjk mt-7"><p>Rather than complaining about the darkness in life, we believe in lighting a candle.</p></div>
+            <div class="prose-jjk mt-7"><p>Come, join us in bringing light, hope, and opportunity into the lives of many more children.</p></div>
         </div>
     </div>
 </section>
