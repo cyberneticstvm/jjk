@@ -20,7 +20,9 @@
             <div class="max-w-3xl pt-14">
                 <div class="mb-5 text-xs font-bold uppercase tracking-[.3em] text-gold">Janaka Janani Kripa Gurukulam Trust</div>
                 @if($i === 0)
-                    <h1 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">{{ $slide[2] }}</h1>
+                    <h1 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">A Home of Learning.<br>A Life of Values.</h1>
+                @elseif($slide[2] === 'Simple Living. Wholesome Care.')
+                    <h2 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">Simple Living.<br>Wholesome Care.</h2>
                 @else
                     <h2 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">{{ $slide[2] }}</h2>
                 @endif
@@ -82,8 +84,20 @@
     <div class="container-site">
         <div class="reveal max-w-2xl"><div class="eyebrow">A holistic path</div><h2 class="section-title">Rooted in tradition, relevant to life.</h2></div>
         <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            @foreach([['ॐ','Yoga & Meditation','Balance body, mind and emotions through authentic practice.'],['गी','Vedanta & Gita','Discover clarity through the wisdom of the Upanishads and Bhagavad Gita.'],['अ','Sanskrit','Learn the refined language of India’s ancient scriptures.'],['से','Seva','Transform compassion into selfless service for children and communities.']] as $item)
-            <div class="card reveal"><div class="grid size-14 place-items-center rounded-full bg-sandal font-serif text-2xl font-bold text-maroon">{{ $item[0] }}</div><h3 class="mt-6 text-2xl font-semibold text-forest">{{ $item[1] }}</h3><p class="mt-3 leading-7 text-ink/65">{{ $item[2] }}</p></div>
+            @foreach([['om','Yoga & Meditation','Balance body, mind and emotions through authentic practice.'],['गी','Vedanta & Gita','Discover clarity through the wisdom of the Upanishads and Bhagavad Gita.'],['अ','Sanskrit','Learn the refined language of India’s ancient scriptures.'],['से','Seva','Transform compassion into selfless service for children and communities.']] as $item)
+            <div class="card reveal">
+                <div class="grid size-14 place-items-center rounded-full bg-sandal font-serif text-2xl font-bold text-maroon">
+                    @if($item[0] === 'om')
+                        <svg class="size-10" viewBox="0 0 120 120" role="img" aria-label="Om">
+                            <text x="6" y="93" fill="currentColor" font-family="Noto Sans Devanagari, Mangal, Arial Unicode MS, sans-serif" font-size="106" font-weight="900" letter-spacing="-8">ॐ</text>
+                        </svg>
+                    @else
+                        {{ $item[0] }}
+                    @endif
+                </div>
+                <h3 class="mt-6 text-2xl font-semibold text-forest">{{ $item[1] }}</h3>
+                <p class="mt-3 leading-7 text-ink/65">{{ $item[2] }}</p>
+            </div>
             @endforeach
         </div>
     </div>

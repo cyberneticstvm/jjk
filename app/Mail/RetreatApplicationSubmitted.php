@@ -17,6 +17,7 @@ class RetreatApplicationSubmitted extends Mailable
     public function __construct(
         public array $application,
         public string $photoPath,
+        public array $supportingAttachments = [],
     ) {
     }
 
@@ -37,9 +38,16 @@ class RetreatApplicationSubmitted extends Mailable
 
     public function attachments(): array
     {
-        return [
+        $attachments = [
             Attachment::fromStorageDisk('local', $this->photoPath)
                 ->as('applicant-photo.'.pathinfo($this->photoPath, PATHINFO_EXTENSION)),
         ];
+
+        foreach ($this->supportingAttachments as $attachment) {
+            $attachments[] = Attachment::fromStorageDisk('local', $attachment['path'])
+                ->as($attachment['name']);
+        }
+
+        return $attachments;
     }
 }

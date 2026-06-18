@@ -30,6 +30,7 @@ class RetreatApplicationTest extends TestCase
             'applicant.png',
             base64_decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl2sAAAAASUVORK5CYII=')
         );
+        $document = UploadedFile::fake()->create('health-note.pdf', 32, 'application/pdf');
 
         $response = $this->post('/retreat-application', [
             'retreat_location' => 'Shanti Nilayam, Thrissur',
@@ -60,6 +61,7 @@ class RetreatApplicationTest extends TestCase
             'signature' => 'Test Applicant',
             'signature_date' => now()->format('Y-m-d'),
             'applicant_photo' => $photo,
+            'supporting_documents' => [$document],
             'declaration' => '1',
         ]);
 
@@ -74,7 +76,9 @@ class RetreatApplicationTest extends TestCase
 
             return $mail->hasTo('applications@example.com')
                 && $mail->application['name'] === 'Test Applicant'
-                && $mail->application['retreat_location'] === 'Shanti Nilayam, Thrissur';
+                && $mail->application['retreat_location'] === 'Shanti Nilayam, Thrissur'
+                && count($mail->attachments()) === 2
+                && $mail->supportingAttachments[0]['name'] === 'health-note.pdf';
         });
 
         Storage::disk('local')->assertMissing($storedPhotoPath);

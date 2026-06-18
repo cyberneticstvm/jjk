@@ -32,7 +32,14 @@
 <body>
     <a href="#main-content" class="fixed left-4 top-3 z-[100] -translate-y-20 bg-white px-4 py-2 font-bold text-maroon focus:translate-y-0">Skip to content</a>
     <div class="bg-forest py-3 text-center text-2xl font-semibold tracking-wide text-white/80">
-        <span class="text-gold">ॐ</span> Tamaso Ma Jyotir Gamaya <span class="mx-2 text-white/30">|</span> Lead us from darkness to light
+        <span class="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <svg class="h-9 w-9 shrink-0" viewBox="0 0 120 120" role="img" aria-label="Om">
+                <text x="6" y="93" fill="#ff6a00" font-family="Noto Sans Devanagari, Mangal, Arial Unicode MS, sans-serif" font-size="106" font-weight="900" letter-spacing="-8">ॐ</text>
+            </svg>
+            <span>Tamaso Ma Jyotir Gamaya</span>
+            <span class="text-white/30">|</span>
+            <span>Lead us from darkness to light</span>
+        </span>
     </div>
     <header class="sticky top-0 z-50 border-b border-saffron/10 bg-parchment/95 backdrop-blur-xl">
         <div class="container-site flex h-20 items-center justify-between">
@@ -40,14 +47,33 @@
                 <img src="{{ asset('images/jjk-logo.png') }}" alt="JJK Gurukulam emblem" class="h-16 w-[70px] shrink-0 object-contain" width="70" height="64">
                 <span><strong class="block font-serif text-xl leading-none text-maroon">Janaka Janani Kripa Gurukulam</strong><small class="mt-1 block text-[10px] font-bold uppercase tracking-[.2em] text-forest/60">Wisdom · Care · Seva</small></span>
             </a>
-            <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
+            <nav class="hidden items-center gap-4 lg:flex" aria-label="Primary navigation">
                 <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
                 <a class="nav-link {{ request()->routeIs('gurukulam') ? 'active' : '' }}" href="{{ route('gurukulam') }}">Gurukulam</a>
                 <a class="nav-link {{ request()->routeIs('shanti') ? 'active' : '' }}" href="{{ route('shanti') }}">Shanti Nilayam</a>
-                <a class="nav-link {{ request()->routeIs('courses') ? 'active' : '' }}" href="{{ route('courses') }}">Courses</a>
                 <a class="nav-link {{ request()->routeIs('masters') ? 'active' : '' }}" href="{{ route('masters') }}">Masters</a>
-                <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
-                <a class="btn-primary !px-5 !py-2.5" href="{{ route('support') }}">Support Us</a>
+                <div class="group relative flex items-center">
+                    <button type="button" class="nav-link {{ request()->routeIs('courses') || request()->is('retreat-application') ? 'active' : '' }} inline-flex items-center gap-1" aria-haspopup="true">
+                        What We Offer
+                        <svg class="size-4 transition group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="invisible absolute left-0 top-full z-50 w-64 translate-y-2 rounded-2xl border border-saffron/15 bg-white p-3 opacity-0 shadow-xl shadow-black/10 transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ route('courses') }}">Courses</a>
+                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ url('/retreat-application') }}">Retreat</a>
+                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ url('/retreat-application') }}">Pilgrimage</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center">
+                    <button type="button" class="nav-link {{ request()->routeIs('support') || request()->routeIs('contact') || request()->routeIs('gallery') ? 'active' : '' }} inline-flex items-center gap-1" aria-haspopup="true">
+                        More
+                        <svg class="size-4 transition group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="invisible absolute right-0 top-full z-50 w-56 translate-y-2 rounded-2xl border border-saffron/15 bg-white p-3 opacity-0 shadow-xl shadow-black/10 transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ route('gallery') }}">Gallery</a>
+                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ route('support') }}">Support Us</a>
+                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ route('contact') }}">Contact Us</a>
+                    </div>
+                </div>
             </nav>
             <button data-menu-button class="grid size-11 place-items-center rounded-full border border-maroon/15 text-maroon lg:hidden" aria-expanded="false" aria-label="Open menu">
                 <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -55,7 +81,26 @@
         </div>
         <nav data-mobile-menu class="container-site hidden border-t border-saffron/10 py-5 lg:hidden" aria-label="Mobile navigation">
             <div class="grid gap-4 font-semibold text-forest">
-                <a href="{{ route('home') }}">Home</a><a href="{{ route('gurukulam') }}">Gurukulam</a><a href="{{ route('shanti') }}">Shanti Nilayam</a><a href="{{ route('courses') }}">Courses</a><a href="{{ route('masters') }}">Masters</a><a href="{{ route('support') }}">Support Us</a><a href="{{ route('contact') }}">Contact</a>
+                <a href="{{ route('home') }}">Home</a>
+                <a href="{{ route('gurukulam') }}">Gurukulam</a>
+                <a href="{{ route('shanti') }}">Shanti Nilayam</a>
+                <a href="{{ route('masters') }}">Masters</a>
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-[.2em] text-saffron">What We Offer</div>
+                    <div class="mt-3 grid gap-3 border-l border-saffron/20 pl-4">
+                        <a href="{{ route('courses') }}">Courses</a>
+                        <a href="{{ url('/retreat-application') }}">Retreat</a>
+                        <a href="{{ url('/retreat-application') }}">Pilgrimage</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-[.2em] text-saffron">More</div>
+                    <div class="mt-3 grid gap-3 border-l border-saffron/20 pl-4">
+                        <a href="{{ route('gallery') }}">Gallery</a>
+                        <a href="{{ route('support') }}">Support Us</a>
+                        <a href="{{ route('contact') }}">Contact Us</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -65,10 +110,13 @@
     <footer class="bg-[#102d25] text-white/70">
         <div class="container-site grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
             <div class="lg:col-span-2">
-                <div class="font-serif text-3xl font-semibold text-white">JJK Gurukulam Trust</div>
+                <div class="flex items-center gap-4">
+                    <img src="{{ asset('images/jjk-logo.png') }}" alt="JJK Gurukulam emblem" class="h-20 w-[88px] shrink-0 object-contain" width="88" height="80">
+                    <div class="font-serif text-3xl font-semibold text-white">JJK Gurukulam Trust</div>
+                </div>
                 <p class="mt-4 max-w-xl leading-7">A charitable trust nurturing children through education and Indian values, while sharing authentic Yoga, Vedanta and Sanskrit through the Guru–Shishya tradition.</p>
             </div>
-            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Retreat Home</a><a href="{{ route('courses') }}">Courses & Yaatras</a><a href="{{ url('/retreat-application') }}">Apply for Retreat</a><a href="{{ route('masters') }}">Masters</a></div></div>
+            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Retreat Home</a><a href="{{ route('courses') }}">Courses & Yaatras</a><a href="{{ route('gallery') }}">Gallery</a><a href="{{ url('/retreat-application') }}">Apply for Retreat</a><a href="{{ route('masters') }}">Masters</a></div></div>
             <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Connect</h2><div class="mt-5 grid gap-3 text-sm"><a href="mailto:jjkgurukulam@gmail.com">jjkgurukulam@gmail.com</a><span>Kerala, South India</span><a class="font-bold text-white" href="{{ route('support') }}">Make a contribution →</a></div></div>
         </div>
         <div class="border-t border-white/10 py-6"><div class="container-site flex flex-col gap-2 text-xs sm:flex-row sm:justify-between"><span>© {{ date('Y') }} JJK Gurukulam Trust. All rights reserved.</span><span>Lokah Samastah Sukhino Bhavantu</span></div></div>

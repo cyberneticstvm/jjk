@@ -24,6 +24,8 @@ class RetreatApplicationController extends Controller
             'Shanti Nilayam, Trivandrum',
             'Shanti Nilayam, Thrissur',
             'Himalaya',
+            'Accommodation',
+            'Pilgrimage',
             'Other',
         ];
 
@@ -56,10 +58,14 @@ class RetreatApplicationController extends Controller
             'signature' => ['required', 'string', 'max:150'],
             'signature_date' => ['required', 'date'],
             'applicant_photo' => ['required', 'image', 'mimes:jpg,jpeg,png,webp', 'max:5120'],
+            'supporting_documents' => ['nullable', 'array', 'max:5'],
+            'supporting_documents.*' => ['file', 'mimes:jpg,jpeg,png,webp,pdf,doc,docx', 'max:10240'],
             'declaration' => ['accepted'],
         ]);
 
-        $recipient = config('mail.application_recipient');
+        unset($validated['applicant_photo'], $validated['supporting_documents']);
+
+        $recipient = config('mail.application_recipient') ?: 'jjkgurukulam@gmail.com';
 
         if (! $recipient) {
             return back()
@@ -68,9 +74,17 @@ class RetreatApplicationController extends Controller
         }
 
         $photoPath = $request->file('applicant_photo')->store('retreat-application-photos', 'local');
+        $supportingAttachments = [];
+
+        foreach ($request->file('supporting_documents', []) as $file) {
+            $supportingAttachments[] = [
+                'path' => $file->store('retreat-application-attachments', 'local'),
+                'name' => $file->getClientOriginalName(),
+            ];
+        }
 
         try {
-            Mail::to($recipient)->send(new RetreatApplicationSubmitted($validated, $photoPath));
+            Mail::to($recipient)->send(new RetreatApplicationSubmitted($validated, $photoPath, $supportingAttachments));
         } catch (Throwable $exception) {
             report($exception);
 
@@ -79,6 +93,7 @@ class RetreatApplicationController extends Controller
                 ->withErrors(['form' => 'We could not send your application right now. Please try again or contact JJK Gurukulam directly.']);
         } finally {
             Storage::disk('local')->delete($photoPath);
+            Storage::disk('local')->delete(collect($supportingAttachments)->pluck('path')->all());
         }
 
         return redirect('/retreat-application')

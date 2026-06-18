@@ -2,7 +2,7 @@
 @section('title', 'Children’s Gurukulam in Thiruvananthapuram | JJK Gurukulam Trust')
 @section('description', 'Learn about JJK Gurukulam, its history, value-based education, daily schedule and nurturing home for underprivileged boys in Kerala.')
 @section('content')
-@include('partials.page-hero',['eyebrow'=>'JJK Children’s Gurukulam · Since 2006','title'=>'A nurturing home for learning and life.','intro'=>'Education, care and Indian values come together in a secure Gurukulam environment in Vattiyoorkavu, Thiruvananthapuram.','image'=>'images/gurukulam-hero.png','alt'=>'Traditional Gurukulam learning in Kerala'])
+@include('partials.page-hero',['eyebrow'=>'JJK Children’s Gurukulam · Since 2006','title'=>'A nurturing home for learning and life.','intro'=>'Education, care and Indian values come together in a secure Gurukulam environment in Vattiyoorkavu, Thiruvananthapuram.','image'=>'images/inner-page-header.jpeg','alt'=>'Kerala paddy fields and coconut palms at sunset'])
 <section class="py-24"><div class="container-site grid gap-14 lg:grid-cols-[1.15fr_.85fr]">
     <div class="reveal"><div class="eyebrow">The Gurukulam tradition</div><h2 class="section-title">Where teacher, student and values share one home.</h2><div class="prose-jjk mt-7">
         <p>A Gurukulam is a traditional place of learning where the teacher and students live together and study the scriptures. The word Guru means “teacher” and Kulam means “home”.</p>

@@ -6,8 +6,8 @@
     'eyebrow'=>'JJK Gurukulam Retreat Home · Thrissur',
     'title'=>'Shanti Nilayam.',
     'intro'=>'A learning centre for traditional Yoga, Vedanta and Sanskrit in the peaceful village of Pallippuram, Kerala.',
-    'image'=>'images/shanti-nilayam-hero.png',
-    'alt'=>'Shanti Nilayam retreat home in rural Kerala'
+    'image'=>'images/inner-page-header.jpeg',
+    'alt'=>'Kerala paddy fields and coconut palms at sunset'
 ])
 
 <section class="py-24">
@@ -157,16 +157,15 @@
 
         <div class="reveal grid gap-3 sm:grid-cols-2">
             @foreach([
-                ['5:30 am','Wake-up'],
-                ['6:00 am to 7:00 am','Meditation + Chanting'],
-                ['7:15 am','Herbal Tea'],
-                ['7:30 am to 8:30 am','Lecture'],
-                ['8:45 am to 10:10 am','Yoga class'],
-                ['10:15 am to 10:45 am','Brunch'],
-                ['11:30 am to 12:00 pm','Karma yoga'],
-                ['12:30 am to 1:30 pm','Sanskrit'],
-                ['1:45 pm','Tea'],
-                ['2:00 pm to 3:00 pm','Free time'],
+                ['5:30','Wake-up'],
+                ['6:00 to 6:30','Japa Meditation'],
+                ['6:30 to 7:15 am','Prayer'],
+                ['7:30 am','Herbal Tea'],
+                ['8:00 am to 9:45 am','Yoga class'],
+                ['10:00 am to 10:30 am','Brunch'],
+                ['11:30 am to 12:30 pm','Lecture'],
+                ['13:30 pm','Herbal Tea'],
+                ['14:00  to 15:00 pm','Free time'],
                 ['3:15 pm to 4:15 pm','Lecture'],
                 ['4.30 pm to 5:30 pm','Walk in nature'],
                 ['6:00 pm to 6:30 pm','Dinner'],

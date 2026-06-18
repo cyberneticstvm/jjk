@@ -6,8 +6,8 @@
     'eyebrow'=>'Contact & directions',
     'title'=>'Come, learn and serve with us.',
     'intro'=>'Reach out about sponsorship, courses, retreats, pilgrimages, volunteering or a visit to either of our Kerala centres.',
-    'image'=>'images/shanti-nilayam-hero.png',
-    'alt'=>'Kerala retreat surrounded by nature'
+    'image'=>'images/inner-page-header.jpeg',
+    'alt'=>'Kerala paddy fields and coconut palms at sunset'
 ])
 
 <section class="py-24">

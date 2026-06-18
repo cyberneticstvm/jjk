@@ -36,7 +36,7 @@
                             <label for="retreat_location" class="block text-sm font-bold text-forest">Retreat location <span class="text-maroon">*</span></label>
                             <select id="retreat_location" name="retreat_location" data-location-select class="mt-2 w-full rounded-xl border border-saffron/20 bg-white px-4 py-3 text-ink outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                                 <option value="">Select a retreat location</option>
-                                @foreach(['Shanti Nilayam, Trivandrum','Shanti Nilayam, Thrissur','Himalaya','Other'] as $location)
+                                @foreach(['Shanti Nilayam, Trivandrum','Shanti Nilayam, Thrissur','Himalaya', 'Accommodation', 'Pilgrimage', 'Other'] as $location)
                                     <option value="{{ $location }}" @selected(old('retreat_location') === $location)>{{ $location }}</option>
                                 @endforeach
                             </select>
@@ -204,6 +204,18 @@
                             </label>
                             <input id="applicant_photo" name="applicant_photo" type="file" accept="image/jpeg,image/png,image/webp" data-photo-input class="sr-only" required>
                             @error('applicant_photo')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
+                        </div>
+
+                        <div>
+                            <label for="supporting_documents" class="block text-sm font-bold text-forest">Additional attachments</label>
+                            <label for="supporting_documents" class="mt-2 flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-saffron/30 bg-white px-6 py-10 text-center transition hover:border-saffron hover:bg-sandal/30">
+                                <svg class="size-9 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94a3 3 0 114.243 4.243L8.552 18.32a1.5 1.5 0 11-2.121-2.121l9.886-9.886"/></svg>
+                                <strong class="mt-3 text-forest">Attach supporting files</strong>
+                                <span class="mt-1 text-sm text-ink/55">Optional: PDF, Word or image files, maximum 5 files / 10 MB each</span>
+                            </label>
+                            <input id="supporting_documents" name="supporting_documents[]" type="file" accept="image/jpeg,image/png,image/webp,application/pdf,.doc,.docx" multiple class="sr-only">
+                            @error('supporting_documents')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
+                            @error('supporting_documents.*')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
 
                         <div class="grid gap-6 md:grid-cols-2">

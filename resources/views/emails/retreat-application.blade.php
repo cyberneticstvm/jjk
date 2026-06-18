@@ -69,7 +69,7 @@
                 </table>
             @endforeach
 
-            <p style="margin:28px 0 0;padding:16px;background:#fcf8ef;border-radius:10px;color:#635c54;font-size:13px;">The applicant photograph is attached to this email.</p>
+            <p style="margin:28px 0 0;padding:16px;background:#fcf8ef;border-radius:10px;color:#635c54;font-size:13px;">The applicant photograph and any additional uploaded files are attached to this email.</p>
         </div>
     </div>
 </body>
