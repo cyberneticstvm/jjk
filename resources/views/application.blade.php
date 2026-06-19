@@ -36,7 +36,7 @@
                             <label for="retreat_location" class="block text-sm font-bold text-forest">Retreat location <span class="text-maroon">*</span></label>
                             <select id="retreat_location" name="retreat_location" data-location-select class="mt-2 w-full rounded-xl border border-saffron/20 bg-white px-4 py-3 text-ink outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                                 <option value="">Select a retreat location</option>
-                                @foreach(['JJK Gurukulam, Trivandrum','Shanti Nilayam, Thrissur', 'Himalaya', 'Accommodation', 'Pilgrimage', 'Other'] as $location)
+                                @foreach(['JJK Gurukulam, Trivandrum','Shanti Nilayam, Thrissur', 'Accommodation', 'Pilgrimage', 'Other'] as $location)
                                     <option value="{{ $location }}" @selected(old('retreat_location') === $location)>{{ $location }}</option>
                                 @endforeach
                             </select>
