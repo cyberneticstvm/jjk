@@ -31,14 +31,14 @@
                 </div>
 
                 <div class="mt-7 space-y-3 border-t border-sandal pt-6 text-sm">
-                    <p><strong class="text-maroon">From airport:</strong> approximately 15 km</p>
-                    <p><strong class="text-maroon">From railway station:</strong> approximately 8.5 km</p>
+                    <p><strong class="text-maroon">From Trivandrum Airport:</strong> approximately 15 km</p>
+                    <p><strong class="text-maroon">From Trivandrum Railway Station:</strong> approximately 8.5 km</p>
                 </div>
             </article>
 
             <article class="card reveal !p-8 sm:!p-10">
                 <div class="text-xs font-bold uppercase tracking-[.2em] text-saffron">Retreat & learning centre</div>
-                <h2 class="mt-3 text-4xl font-semibold text-forest">JJK Gurukulam Retreat Home</h2>
+                <h2 class="mt-3 text-4xl font-semibold text-forest">Shanti Nilayam</h2>
 
                 <address class="mt-5 not-italic leading-8 text-ink/65">
                     Pallippuram, Kodannur P.O.<br>
@@ -53,8 +53,8 @@
                 </div>
 
                 <div class="mt-7 space-y-3 border-t border-sandal pt-6 text-sm">
-                    <p><strong class="text-maroon">From Thrissur station:</strong> approximately 14 km</p>
-                    <p><strong class="text-maroon">From Kochi airport:</strong> approximately 1 hour 15 minutes</p>
+                    <p><strong class="text-maroon">From Cochin Airport:</strong> approximately 1 hour 15 minutes</p>
+                    <p><strong class="text-maroon">From Thrissur Railway Station:</strong> approximately 14 km</p>                    
                 </div>
             </article>
         </div>

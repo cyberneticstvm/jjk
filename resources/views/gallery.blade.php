@@ -15,7 +15,7 @@
         <div class="reveal mx-auto max-w-3xl text-center">
             <div class="eyebrow justify-center before:hidden">Photo Gallery</div>
             <h2 class="section-title">Life, learning and quiet moments.</h2>
-            <p class="prose-jjk mt-6">Add new images to <strong>public/images/gallery</strong> and they will appear here automatically.</p>
+            <!--<p class="prose-jjk mt-6">Add new images to <strong>public/images/gallery</strong> and they will appear here automatically.</p>-->
         </div>
 
         @if($images->isNotEmpty())

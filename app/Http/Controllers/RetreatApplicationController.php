@@ -21,7 +21,7 @@ class RetreatApplicationController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $locations = [
-            'Shanti Nilayam, Trivandrum',
+            'JJK Gurukulam, Trivandrum',
             'Shanti Nilayam, Thrissur',
             'Himalaya',
             'Accommodation',

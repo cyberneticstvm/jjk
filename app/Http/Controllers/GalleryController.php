@@ -17,10 +17,21 @@ class GalleryController extends Controller
             ->sortBy(fn ($file) => $file->getFilename())
             ->map(fn ($file) => [
                 'src' => asset('images/gallery/'.$file->getFilename()),
-                'alt' => str($file->getFilenameWithoutExtension())->replace(['-', '_'], ' ')->title()->toString(),
+                'alt' => $this->captionFromFilename($file->getFilenameWithoutExtension()),
             ])
             ->values();
 
         return view('gallery', compact('images'));
+    }
+
+    private function captionFromFilename(string $filename): string
+    {
+        return collect(preg_split('/[-_\s]+/', $filename, flags: PREG_SPLIT_NO_EMPTY))
+            ->map(function (string $word): string {
+                return strtoupper($word) === $word
+                    ? $word
+                    : ucfirst($word);
+            })
+            ->implode(' ');
     }
 }

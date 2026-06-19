@@ -8,6 +8,8 @@ Route::view('/', 'home')->name('home');
 Route::view('/gurukulam', 'gurukulam')->name('gurukulam');
 Route::view('/shanti-nilayam', 'shanti-nilayam')->name('shanti');
 Route::view('/courses', 'courses')->name('courses');
+Route::view('/retreat', 'retreat')->name('retreat');
+Route::view('/pilgrimage', 'pilgrimage')->name('pilgrimage');
 Route::view('/masters', 'masters')->name('masters');
 Route::get('/gallery', GalleryController::class)->name('gallery');
 Route::redirect('/teachers', '/masters', 301);

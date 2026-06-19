@@ -13,8 +13,8 @@
 <section class="py-24">
     <div class="container-site">
         <article class="card reveal !p-0 overflow-hidden">
-            <div class="grid gap-0 lg:grid-cols-[360px_1fr]">
-                <div class="bg-sandal p-6 sm:p-8">
+            <div class="grid gap-0 lg:grid-cols-[360px_1fr] lg:items-center">
+                <div class="flex h-full items-center bg-sandal p-6 sm:p-8">
                     <img src="{{ asset('images/swami-tattvarupananda.jpeg') }}" alt="Swami Tattvarupananda Saraswati" class="mx-auto h-auto w-full max-w-[320px] rounded-[1.5rem] object-contain shadow-xl">
                 </div>
                 <div class="p-8 sm:p-12">
@@ -48,8 +48,8 @@
 
         <div class="mt-12 grid gap-8">
             <article class="card reveal !p-0 overflow-hidden">
-                <div class="grid lg:grid-cols-[320px_1fr]">
-                    <div class="bg-white p-6 sm:p-8">
+                <div class="grid lg:grid-cols-[320px_1fr] lg:items-center">
+                    <div class="flex h-full items-center bg-white p-6 sm:p-8">
                         <img src="{{ asset('images/swami-dayananda.jpeg') }}" alt="Swami Dayananda Saraswati" class="mx-auto h-auto w-full max-w-[280px] rounded-[1.5rem] object-contain shadow-lg">
                     </div>
                     <div class="p-8 sm:p-10">
@@ -81,8 +81,8 @@
             </article>
 
             <article class="card reveal !p-0 overflow-hidden">
-                <div class="grid lg:grid-cols-[320px_1fr]">
-                    <div class="bg-white p-6 sm:p-8">
+                <div class="grid lg:grid-cols-[320px_1fr] lg:items-center">
+                    <div class="flex h-full items-center bg-white p-6 sm:p-8">
                         <img src="{{ asset('images/swami-sivananda.jpeg') }}" alt="Swami Sivananda Saraswati" class="mx-auto h-auto w-full max-w-[280px] rounded-[1.5rem] object-contain shadow-lg">
                     </div>
                     <div class="p-8 sm:p-10">
@@ -112,8 +112,8 @@
             </article>
 
             <article class="card reveal !p-0 overflow-hidden">
-                <div class="grid lg:grid-cols-[320px_1fr]">
-                    <div class="bg-white p-6 sm:p-8">
+                <div class="grid lg:grid-cols-[320px_1fr] lg:items-center">
+                    <div class="flex h-full items-center bg-white p-6 sm:p-8">
                         <img src="{{ asset('images/swami-chinmayananda.jpeg') }}" alt="Swami Chinmayananda Saraswati" class="mx-auto h-auto w-full max-w-[280px] rounded-[1.5rem] object-contain shadow-lg">
                     </div>
                     <div class="p-8 sm:p-10">

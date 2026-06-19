@@ -53,14 +53,15 @@
                 <a class="nav-link {{ request()->routeIs('shanti') ? 'active' : '' }}" href="{{ route('shanti') }}">Shanti Nilayam</a>
                 <a class="nav-link {{ request()->routeIs('masters') ? 'active' : '' }}" href="{{ route('masters') }}">Masters</a>
                 <div class="group relative flex items-center">
-                    <button type="button" class="nav-link {{ request()->routeIs('courses') || request()->is('retreat-application') ? 'active' : '' }} inline-flex items-center gap-1" aria-haspopup="true">
+                    <button type="button" class="nav-link {{ request()->routeIs('courses') || request()->routeIs('retreat') || request()->routeIs('pilgrimage') || request()->is('retreat-application') ? 'active' : '' }} inline-flex items-center gap-1" aria-haspopup="true">
                         What We Offer
                         <svg class="size-4 transition group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
                     </button>
                     <div class="invisible absolute left-0 top-full z-50 w-64 translate-y-2 rounded-2xl border border-saffron/15 bg-white p-3 opacity-0 shadow-xl shadow-black/10 transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                         <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ route('courses') }}">Courses</a>
-                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ url('/retreat-application') }}">Retreat</a>
-                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ url('/retreat-application') }}">Pilgrimage</a>
+                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ route('retreat') }}">Retreat</a>
+                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ route('pilgrimage') }}">Pilgrimage</a>
+                        <a class="block rounded-xl px-4 py-3 text-sm font-bold text-forest transition hover:bg-sandal hover:text-maroon" href="{{ url('/retreat-application') }}">Application Form</a>
                     </div>
                 </div>
                 <div class="group relative flex items-center">
@@ -89,8 +90,9 @@
                     <div class="text-xs font-bold uppercase tracking-[.2em] text-saffron">What We Offer</div>
                     <div class="mt-3 grid gap-3 border-l border-saffron/20 pl-4">
                         <a href="{{ route('courses') }}">Courses</a>
-                        <a href="{{ url('/retreat-application') }}">Retreat</a>
-                        <a href="{{ url('/retreat-application') }}">Pilgrimage</a>
+                        <a href="{{ route('retreat') }}">Retreat</a>
+                        <a href="{{ route('pilgrimage') }}">Pilgrimage</a>
+                        <a href="{{ url('/retreat-application') }}">Application Form</a>
                     </div>
                 </div>
                 <div>
@@ -116,7 +118,7 @@
                 </div>
                 <p class="mt-4 max-w-xl leading-7">A charitable trust nurturing children through education and Indian values, while sharing authentic Yoga, Vedanta and Sanskrit through the Guru–Shishya tradition.</p>
             </div>
-            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Retreat Home</a><a href="{{ route('courses') }}">Courses & Yaatras</a><a href="{{ route('gallery') }}">Gallery</a><a href="{{ url('/retreat-application') }}">Apply for Retreat</a><a href="{{ route('masters') }}">Masters</a></div></div>
+            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Shanti Nilayam</a><a href="{{ route('courses') }}">Courses & Yaatras</a><a href="{{ route('gallery') }}">Gallery</a><a href="{{ url('/retreat-application') }}">Application Form</a><a href="{{ route('masters') }}">Masters</a></div></div>
             <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Connect</h2><div class="mt-5 grid gap-3 text-sm"><a href="mailto:jjkgurukulam@gmail.com">jjkgurukulam@gmail.com</a><span>Kerala, South India</span><a class="font-bold text-white" href="{{ route('support') }}">Make a contribution →</a></div></div>
         </div>
         <div class="border-t border-white/10 py-6"><div class="container-site flex flex-col gap-2 text-xs sm:flex-row sm:justify-between"><span>© {{ date('Y') }} JJK Gurukulam Trust. All rights reserved.</span><span>Lokah Samastah Sukhino Bhavantu</span></div></div>

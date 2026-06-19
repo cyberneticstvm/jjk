@@ -157,19 +157,19 @@
 
         <div class="reveal grid gap-3 sm:grid-cols-2">
             @foreach([
-                ['5:30','Wake-up'],
-                ['6:00 to 6:30','Japa Meditation'],
-                ['6:30 to 7:15 am','Prayer'],
+                ['5:30 am','Wake-up'],
+                ['6:00 am','Japa Meditation'],
+                ['6:30 am','Prayer'],
                 ['7:30 am','Herbal Tea'],
-                ['8:00 am to 9:45 am','Yoga class'],
-                ['10:00 am to 10:30 am','Brunch'],
-                ['11:30 am to 12:30 pm','Lecture'],
-                ['13:30 pm','Herbal Tea'],
-                ['14:00  to 15:00 pm','Free time'],
-                ['3:15 pm to 4:15 pm','Lecture'],
-                ['4.30 pm to 5:30 pm','Walk in nature'],
-                ['6:00 pm to 6:30 pm','Dinner'],
-                ['7.30 pm to 8:45 pm','Satsang (Q&A)'],
+                ['8:00 am','Yoga class'],
+                ['10:00 am','Brunch'],
+                ['11:30 am','Lecture'],
+                ['1:30 pm','Herbal Tea'],
+                ['2:00 pm','Free time'],
+                ['3:15 pm','Lecture'],
+                ['4.30 pm','Walk in nature'],
+                ['6:00 pm','Dinner'],
+                ['7.30 pm','Satsang (Q&A)'],
                 ['9.30 pm','Lights off'],
             ] as $slot)
                 <div class="grid grid-cols-[145px_1fr] items-center rounded-2xl border border-saffron/15 bg-white px-5 py-4">

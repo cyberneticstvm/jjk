@@ -15,7 +15,7 @@ class RetreatApplicationTest extends TestCase
         $this->get('/retreat-application')
             ->assertOk()
             ->assertSee('Retreat application.')
-            ->assertSee('Shanti Nilayam, Trivandrum')
+            ->assertSee('JJK Gurukulam, Trivandrum')
             ->assertSee('Shanti Nilayam, Thrissur')
             ->assertSee('Himalaya');
     }

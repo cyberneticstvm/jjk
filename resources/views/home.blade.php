@@ -21,8 +21,12 @@
                 <div class="mb-5 text-xs font-bold uppercase tracking-[.3em] text-gold">Janaka Janani Kripa Gurukulam Trust</div>
                 @if($i === 0)
                     <h1 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">A Home of Learning.<br>A Life of Values.</h1>
+                @elseif($slide[2] === 'Ancient Wisdom for Modern Life.')
+                    <h2 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">Ancient Wisdom<br>for Modern Life.</h2>
                 @elseif($slide[2] === 'Simple Living. Wholesome Care.')
                     <h2 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">Simple Living.<br>Wholesome Care.</h2>
+                @elseif($slide[2] === 'A Space for Study and Reflection.')
+                    <h2 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">A Space for Study<br>and Reflection.</h2>
                 @else
                     <h2 class="max-w-4xl font-serif text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">{{ $slide[2] }}</h2>
                 @endif
