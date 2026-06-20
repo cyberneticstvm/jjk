@@ -6,7 +6,7 @@
     'eyebrow'=>'What We Offer',
     'title'=>'Retreat at Shanti Nilayam.',
     'intro'=>'A disciplined and peaceful Ashrama rhythm for Yoga, Vedanta, meditation, service and inner clarity.',
-    'image'=>'images/inner-page-header.jpeg',
+    'image'=>'images/slider/Slider_1.jpg.jpeg',
     'alt'=>'Kerala paddy fields and coconut palms at sunset'
 ])
 
@@ -42,9 +42,7 @@
 <section class="py-24">
     <div class="container-site grid gap-14 lg:grid-cols-[.85fr_1.15fr]">
         <div class="reveal">
-            <div class="eyebrow">Retreat day rhythm</div>
-            <h2 class="section-title">A balanced flow of silence, study and seva.</h2>
-            <p class="prose-jjk mt-6">Each retreat day is arranged to gently support inner discipline: early meditation, prayer, Yoga, scriptural learning, Karma Yoga, nature time and evening Satsang.</p>
+            <div class="eyebrow">Retreat daily schedule</div>
             <div class="mt-8 flex flex-wrap gap-3">
                 <a class="btn-primary" href="{{ url('/retreat-application') }}">Apply for a retreat</a>
                 <a class="inline-flex items-center justify-center rounded-full border border-maroon/20 px-6 py-3.5 text-sm font-bold text-maroon transition hover:border-maroon hover:bg-maroon hover:text-white" href="{{ route('contact') }}">Contact us</a>
@@ -54,18 +52,18 @@
         <div class="reveal grid gap-3 sm:grid-cols-2">
             @foreach([
                 ['5:30 am','Wake-up'],
-                ['6:00 am','Japa Meditation'],
-                ['6:30 am','Prayer'],
-                ['7:30 am','Herbal Tea'],
-                ['8:00 am','Yoga class'],
-                ['10:00 am','Brunch'],
-                ['11:30 am','Lecture'],
                 ['1:30 pm','Herbal Tea'],
+                ['6:00 am','Japa Meditation'],
                 ['2:00 pm','Free time'],
+                ['6:30 am','Prayer'],
                 ['3:15 pm','Lecture'],
+                ['7:30 am','Herbal Tea'],
                 ['4.30 pm','Walk in nature'],
+                ['8:00 am','Yoga class'],
                 ['6:00 pm','Dinner'],
+                ['10:00 am','Brunch'],
                 ['7.30 pm','Satsang (Q&A)'],
+                ['11:30 am','Lecture'],
                 ['9.30 pm','Lights off'],
             ] as $slot)
                 <div class="grid grid-cols-[125px_1fr] items-center rounded-2xl border border-saffron/15 bg-white px-5 py-4 shadow-[0_10px_28px_rgba(72,48,30,.04)]">
@@ -81,7 +79,7 @@
     <div class="container-site grid gap-10 lg:grid-cols-[1.2fr_.8fr] lg:items-center">
         <div class="reveal">
             <div class="text-xs font-bold uppercase tracking-[.2em] text-gold">Plan your visit</div>
-            <h2 class="mt-3 text-4xl font-semibold">Apply for a retreat at Shanti Nilayam.</h2>
+            <h2 class="mt-3 text-4xl font-semibold">Apply for a retreat <br>at Shanti Nilayam.</h2>
             <p class="mt-5 max-w-3xl leading-8 text-white/75">For course dates, retreat applications, Sanskrit classes, Yaatra details or travel assistance, please contact JJK Gurukulam.</p>
         </div>
         <div class="reveal flex flex-wrap gap-3 lg:justify-end">

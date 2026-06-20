@@ -27,11 +27,11 @@ We are located about 8.5 km from Thiruvananthapuram Railway Station. The nearest
 </p>
     </aside>
 </div></section>
-<section class="bg-sandal/60 py-24"><div class="container-site"><div class="reveal max-w-3xl"><div class="eyebrow">Learning & wellbeing</div><h2 class="section-title">A complete foundation for every child.</h2></div><div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+<section class="bg-sandal/60 py-24"><div class="container-site"><div class="reveal max-w-3xl"><div class="eyebrow">Learning & wellbeing</div><h2 class="section-title">A complete foundation <br>for every child.</h2></div><div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 @foreach([['Formal Education','Children attend a nearby public school and receive dedicated English tuition.'],['Spiritual Learning','Sanskrit, Bhagavad Gita, Vishnu Sahasranamam and traditional Vedic chanting.'],['Healthy Living','Nutritious vegetarian meals, Hatha Yoga, play and a disciplined daily rhythm.'],['A Secure Home','Shelter, clothing, books, healthcare and compassionate guidance.'],['Family Connection','Regular contact with families and school holidays spent at home.'],['Character & Seva','Dharma, meditation, self-discipline and Karma Yoga in daily life.']] as $item)
 <div class="card reveal"><h3 class="text-2xl font-semibold text-forest">{{ $item[0] }}</h3><p class="mt-3 leading-7 text-ink/65">{{ $item[1] }}</p></div>@endforeach
 </div></div></section>
-<section class="py-24"><div class="container-site grid gap-14 lg:grid-cols-2"><div class="reveal"><div class="eyebrow">A day at JJK</div><h2 class="section-title">Discipline with warmth.</h2><p class="prose-jjk mt-6">From dawn prayer to evening study, each day creates space for learning, service, movement and rest.</p></div><div class="reveal grid gap-0 overflow-hidden rounded-3xl border border-saffron/15 bg-white shadow-xl shadow-black/5">
+<section class="py-24"><div class="container-site grid gap-14 lg:grid-cols-2"><div class="reveal"><h2 class="section-title">A day at JJK Gurukulam</h2></div><div class="reveal grid gap-0 overflow-hidden rounded-3xl border border-saffron/15 bg-white shadow-xl shadow-black/5">
 @foreach([['5:00 am','Wake up & bath'],['5:30 am','Hatha Yoga'],['6:00 am','Morning prayer'],['6:45 am','Karma Yoga'],['7:15 am','Study'],['8:15 am','Breakfast'],['9:00 am','School'],['3:30 pm','Return, tea & play'],['6:00 pm','Evening prayer & chanting'],['7:15 pm','Dinner'],['8:00 pm','Study'],['9:00 pm','Bedtime']] as $slot)
 <div class="grid grid-cols-[100px_1fr] border-b border-sandal px-6 py-3.5 last:border-0"><strong class="text-maroon">{{ $slot[0] }}</strong><span class="text-ink/70">{{ $slot[1] }}</span></div>@endforeach
 </div></div></section>

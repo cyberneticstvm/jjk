@@ -113,12 +113,12 @@
         <div class="container-site grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
             <div class="lg:col-span-2">
                 <div class="flex items-center gap-4">
-                    <img src="{{ asset('images/jjk-logo.png') }}" alt="JJK Gurukulam emblem" class="h-20 w-[88px] shrink-0 object-contain" width="88" height="80">
+                    <img src="{{ asset('images/jjk-footer.png') }}" alt="JJK Gurukulam emblem" class="h-20 w-[88px] shrink-0 object-contain" width="88" height="80">
                     <div class="font-serif text-3xl font-semibold text-white">JJK Gurukulam Trust</div>
                 </div>
                 <p class="mt-4 max-w-xl leading-7">A charitable trust nurturing children through education and Indian values, while sharing authentic Yoga, Vedanta and Sanskrit through the Guru–Shishya tradition.</p>
             </div>
-            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Shanti Nilayam</a><a href="{{ route('courses') }}">Courses & Yaatras</a><a href="{{ route('gallery') }}">Gallery</a><a href="{{ url('/retreat-application') }}">Application Form</a><a href="{{ route('masters') }}">Masters</a></div></div>
+            <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Explore</h2><div class="mt-5 grid gap-3 text-sm"><a href="{{ route('gurukulam') }}">Children's Gurukulam</a><a href="{{ route('shanti') }}">Shanti Nilayam</a><a href="{{ route('courses') }}">Courses, Retreats, & Pilgrimages</a><a href="{{ route('gallery') }}">Gallery</a><a href="{{ url('/retreat-application') }}">Application Form</a><a href="{{ route('masters') }}">Masters</a></div></div>
             <div><h2 class="font-sans text-xs font-bold uppercase tracking-[.2em] text-gold">Connect</h2><div class="mt-5 grid gap-3 text-sm"><a href="mailto:jjkgurukulam@gmail.com">jjkgurukulam@gmail.com</a><span>Kerala, South India</span><a class="font-bold text-white" href="{{ route('support') }}">Make a contribution →</a></div></div>
         </div>
         <div class="border-t border-white/10 py-6"><div class="container-site flex flex-col gap-2 text-xs sm:flex-row sm:justify-between"><span>© {{ date('Y') }} JJK Gurukulam Trust. All rights reserved.</span><span>Lokah Samastah Sukhino Bhavantu</span></div></div>

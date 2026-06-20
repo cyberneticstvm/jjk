@@ -3,7 +3,7 @@
 @section('description', 'Residential traditional Yoga, Vedanta, Bhagavad Gita, Upanishad and Sanskrit courses at Shanti Nilayam Gurukulam in Kerala.')
 @section('content')
 @include('partials.page-hero',['eyebrow'=>'Traditional residential learning','title'=>'Study. Reflect. Discover.','intro'=>'Authentic Yoga, Vedanta and Sanskrit programs for seekers from all backgrounds, taught in the traditional Guru–Shishya lineage.','image'=>'images/inner-page-header.jpeg','alt'=>'Kerala paddy fields and coconut palms at sunset'])
-<section class="py-24"><div class="container-site"><div class="reveal max-w-3xl"><div class="eyebrow">Our learning paths</div><h2 class="section-title">Timeless knowledge, carefully unfolded.</h2><p class="prose-jjk mt-6">The peaceful Gurukulam atmosphere supports focused study, meditation, selfless service and genuine inner inquiry.</p></div>
+<section class="py-24"><div class="container-site"><div class="reveal max-w-3xl"><div class="eyebrow">Our learning paths</div><h2 class="section-title">Timeless knowledge, <br>carefully unfolded.</h2><p class="prose-jjk mt-6">The peaceful Gurukulam atmosphere supports focused study, meditation, selfless service and genuine inner inquiry.</p></div>
 <div class="mt-12 grid gap-7 lg:grid-cols-3">
 @foreach([
 ['Traditional Yoga','Yoga is a holistic discipline that brings balance to body, mind and emotions. Classes include asana, pranayama, meditation, relaxation, chanting and devotional prayer.','Suitable for beginners and experienced practitioners'],

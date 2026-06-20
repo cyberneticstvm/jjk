@@ -51,7 +51,7 @@
     <div class="container-site relative grid items-center gap-16 lg:grid-cols-2">
         <div class="reveal">
             <div class="eyebrow">Who we are</div>
-            <h2 class="section-title">Lighting a candle in a child's life.</h2>
+            <h2 class="section-title">Lighting a candle <br>in a child's life.</h2>
             <div class="prose-jjk mt-7"><p>Welcome to Janaka Janani Kripa Gurukulam Trust (JJK Gurukulam Trust), a charitable and social service organization dedicated to providing education, care, and a nurturing home for children from underprivileged and dysfunctional families.</p></div>
             <div class="prose-jjk mt-7"><p>We admit children from economically challenged backgrounds where often one or both parents are absent, or where difficult family circumstances prevent proper care and education for the child. Along with shelter, clothing, books, and nutritious vegetarian food, we provide value-based education in a safe and supportive environment. The children also attend nearby public schools for their formal education.</p></div>
             <a href="{{ route('gurukulam') }}" class="mt-8 inline-flex font-bold text-maroon">Our story and daily life <span class="ml-2">→</span></a>
@@ -76,7 +76,7 @@
 
 <section class="bg-sandal/70 py-24">
     <div class="container-site">
-        <div class="reveal mx-auto max-w-2xl text-center"><div class="eyebrow justify-center before:hidden">One vision, two sacred spaces</div><h2 class="section-title">Care in action. Wisdom in practice.</h2></div>
+        <div class="reveal mx-auto max-w-2xl text-center"><div class="eyebrow justify-center before:hidden">One vision, two sacred spaces</div><h2 class="section-title">Care in action.<br> Wisdom in practice.</h2></div>
         <div class="mt-12 grid gap-7 lg:grid-cols-2">
             <a href="{{ route('gurukulam') }}" class="reveal group relative min-h-[480px] overflow-hidden rounded-[2rem] text-white"><img src="{{ asset('images/location1.jpeg') }}" alt="" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-[#102d25] via-transparent"></div><div class="absolute inset-x-0 bottom-0 p-8 sm:p-10"><span class="text-xs font-bold uppercase tracking-[.2em] text-gold">Thiruvananthapuram</span><h3 class="mt-2 text-4xl font-semibold">JJK Children's Gurukulam</h3><p class="mt-3 max-w-md text-white/75">A loving home where education, discipline and character grow together.</p></div></a>
             <a href="{{ route('shanti') }}" class="reveal group relative min-h-[480px] overflow-hidden rounded-[2rem] text-white"><img src="{{ asset('images/location2.jpeg') }}" alt="" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-maroon via-transparent"></div><div class="absolute inset-x-0 bottom-0 p-8 sm:p-10"><span class="text-xs font-bold uppercase tracking-[.2em] text-gold">Thrissur</span><h3 class="mt-2 text-4xl font-semibold">Shanti Nilayam</h3><p class="mt-3 max-w-md text-white/75">An abode of peace for traditional Yoga, Vedanta, Sanskrit and self-discovery.</p></div></a>
@@ -109,7 +109,7 @@
 
 <section class="bg-maroon py-20 text-white">
     <div class="container-site reveal flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-        <div><div class="text-xs font-bold uppercase tracking-[.25em] text-gold">Be part of the light</div><h2 class="mt-3 font-serif text-4xl font-semibold sm:text-5xl">A day of care can shape a lifetime.</h2><p class="mt-4 max-w-2xl text-white/70">Sponsor meals, education, clothing or a child's complete care. Every contribution is acknowledged, accounted for and audited.</p></div>
+        <div><div class="text-xs font-bold uppercase tracking-[.25em] text-gold">Be part of the light</div><h2 class="mt-3 font-serif text-4xl font-semibold sm:text-5xl">A day of care can shape<br>a lifetime.</h2><p class="mt-4 max-w-2xl text-white/70">Sponsor meals, education, clothing or a child's complete care. Every contribution is acknowledged, accounted for and audited.</p></div>
         <a href="{{ route('support') }}" class="btn-light shrink-0">See ways to contribute</a>
     </div>
 </section>

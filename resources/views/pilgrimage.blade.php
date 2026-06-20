@@ -13,7 +13,7 @@
 <section class="bg-forest py-24 text-white">
     <div class="container-site">
         <div class="reveal max-w-3xl">
-            <div class="text-xs font-bold uppercase tracking-[.2em] text-gold">Pilgrimages (Yaatra)</div>
+            <div class="text-xs font-bold uppercase tracking-[.2em] text-gold">Pilgrimage</div>
             <h2 class="mt-4 font-serif text-4xl font-semibold sm:text-5xl">A sacred journey in the Indian spiritual tradition.</h2>
             <div class="mt-7 space-y-5 leading-8 text-white/75">
                 <p>Going on a Yaatra or pilgrimage is considered a sacred journey in the Indian spiritual tradition. A pilgrimage is not merely travelling from one place to another; it is an opportunity to encounter challenges, step out of one’s comfort zone, and learn to adapt the mind to different situations with patience and devotion.</p>
@@ -44,8 +44,8 @@
 <section class="bg-maroon py-20 text-white">
     <div class="container-site grid gap-10 lg:grid-cols-[1.2fr_.8fr] lg:items-center">
         <div class="reveal">
-            <div class="text-xs font-bold uppercase tracking-[.2em] text-gold">Join a Yaatra</div>
-            <h2 class="mt-3 text-4xl font-semibold">Begin the journey with devotion and preparation.</h2>
+            <div class="text-xs font-bold uppercase tracking-[.2em] text-gold">Join a Pilgrimage</div>
+            <h2 class="mt-3 text-4xl font-semibold">Begin the journey with devotion <br>and preparation.</h2>
             <p class="mt-5 max-w-3xl leading-8 text-white/75">For pilgrimage dates, application details, travel guidance or other assistance, please contact JJK Gurukulam.</p>
         </div>
         <div class="reveal flex flex-wrap gap-3 lg:justify-end">

@@ -14,7 +14,7 @@
     <div class="container-site">
         <article class="card reveal !p-0 overflow-hidden">
             <div class="grid gap-0 lg:grid-cols-[360px_1fr] lg:items-center">
-                <div class="flex h-full items-center bg-sandal p-6 sm:p-8">
+                <div class="flex h-full items-center p-6 sm:p-8">
                     <img src="{{ asset('images/swami-tattvarupananda.jpeg') }}" alt="Swami Tattvarupananda Saraswati" class="mx-auto h-auto w-full max-w-[320px] rounded-[1.5rem] object-contain shadow-xl">
                 </div>
                 <div class="p-8 sm:p-12">
@@ -43,7 +43,7 @@
     <div class="container-site">
         <div class="reveal max-w-3xl">
             <div class="eyebrow">Lineage</div>
-            <h2 class="section-title">Masters who carried the light forward.</h2>
+            <h2 class="section-title">Masters who carried <br>the light forward.</h2>
         </div>
 
         <div class="mt-12 grid gap-8">

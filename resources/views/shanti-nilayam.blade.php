@@ -6,7 +6,7 @@
     'eyebrow'=>'JJK Gurukulam Retreat Home · Thrissur',
     'title'=>'Shanti Nilayam.',
     'intro'=>'A learning centre for traditional Yoga, Vedanta and Sanskrit in the peaceful village of Pallippuram, Kerala.',
-    'image'=>'images/inner-page-header.jpeg',
+    'image'=>'images/slider/Slider_1.jpg.jpeg',
     'alt'=>'Kerala paddy fields and coconut palms at sunset'
 ])
 
@@ -20,7 +20,7 @@
                 <p>We regularly conduct courses in Yoga, Sanskrit, Upanishads, Bhagavad Gita, and other subjects related to Vedanta. Our team of teachers has been trained in the Arsha Vidya tradition established by Swami Dayananda Saraswati. The director of Shanti Nilayam is Swami Tattvarupananda, a disciple of Swami Dayananda Saraswati. Swami Tattvarupananda teaches in different parts of the world and is known for his unique and inspiring way of imparting this ancient wisdom.</p>
             </div>
         </div>
-        <img src="{{ asset('images/shanti-nilayam-inner.jpeg') }}" alt="Peaceful paddy fields and coconut groves near Shanti Nilayam" class="reveal aspect-square w-full rounded-[2rem] object-cover shadow-2xl">
+        <img src="{{ asset('images/shanti-nilayam-spiritual-practice.png') }}" alt="Meditation practice in a peaceful Kerala retreat courtyard" class="reveal aspect-square w-full rounded-[2rem] object-cover shadow-2xl">
     </div>
 </section>
 
@@ -99,7 +99,7 @@
     <div class="container-site">
         <div class="reveal max-w-3xl">
             <div class="eyebrow">Sanskrit Courses</div>
-            <h2 class="section-title">The language of ancient wisdom.</h2>
+            <h2 class="section-title">The language of <br>ancient wisdom.</h2>
             <div class="prose-jjk mt-7">
                 <p>We regularly conduct Sanskrit classes at our Shanti Nilayam Gurukulam.</p>
                 <p>To truly understand the Indian scriptures, it is essential to learn the Sanskrit language, as it is the medium through which the ancient sages communicated their knowledge. Sanskrit is regarded as one of the most refined and scientific languages in the world. The word Sanskritam itself means “refined” or “perfected”.</p>
@@ -147,7 +147,7 @@
     <div class="container-site grid gap-14 lg:grid-cols-[.8fr_1.2fr]">
         <div class="reveal">
             <div class="eyebrow">Daily Schedule</div>
-            <h2 class="section-title">Shanti Nilayam Retreat Home course routine.</h2>
+            <h2 class="section-title">Shanti Nilayam Retreat Home.</h2>
             <p class="prose-jjk mt-6">Daily Schedule during the Course.</p>
             <div class="mt-8 flex flex-wrap gap-3">
                 <a class="btn-primary" href="{{ url('/retreat-application') }}">Apply for a retreat</a>
@@ -158,19 +158,19 @@
         <div class="reveal grid gap-3 sm:grid-cols-2">
             @foreach([
                 ['5:30 am','Wake-up'],
-                ['6:00 am','Japa Meditation'],
-                ['6:30 am','Prayer'],
-                ['7:30 am','Herbal Tea'],
-                ['8:00 am','Yoga class'],
-                ['10:00 am','Brunch'],
-                ['11:30 am','Lecture'],
                 ['1:30 pm','Herbal Tea'],
+                ['6:00 am','Japa Meditation'],
                 ['2:00 pm','Free time'],
+                ['6:30 am','Prayer'],
                 ['3:15 pm','Lecture'],
+                ['7:30 am','Herbal Tea'],
                 ['4.30 pm','Walk in nature'],
+                ['8:00 am','Yoga class'],
                 ['6:00 pm','Dinner'],
+                ['10:00 am','Brunch'],
                 ['7.30 pm','Satsang (Q&A)'],
-                ['9.30 pm','Lights off'],
+                ['11:30 am','Lecture'],
+                ['9.30 pm','Lights off'],            
             ] as $slot)
                 <div class="grid grid-cols-[145px_1fr] items-center rounded-2xl border border-saffron/15 bg-white px-5 py-4">
                     <strong class="text-maroon">{{ $slot[0] }}</strong>

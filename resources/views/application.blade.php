@@ -4,7 +4,7 @@
 @section('content')
 @include('partials.page-hero',[
     'eyebrow'=>'Sanskrit · Yoga · Vedanta',
-    'title'=>'Retreat application.',
+    'title'=>'Application.',
     'intro'=>'Complete the form below to apply for a residential retreat or pilgrimage program. Fields marked with an asterisk are required.',
     'image'=>'images/shanti-nilayam-hero.png',
     'alt'=>'Shanti Nilayam retreat in Kerala'
@@ -33,9 +33,9 @@
                     <legend class="px-2 font-serif text-3xl font-semibold text-forest">Application Form</legend>
                     <div class="mt-5 grid gap-6 md:grid-cols-2">
                         <div class="md:col-span-2">
-                            <label for="retreat_location" class="block text-sm font-bold text-forest">Retreat location <span class="text-maroon">*</span></label>
+                            <label for="retreat_location" class="block text-sm font-bold text-forest">Location <span class="text-maroon">*</span></label>
                             <select id="retreat_location" name="retreat_location" data-location-select class="mt-2 w-full rounded-xl border border-saffron/20 bg-white px-4 py-3 text-ink outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
-                                <option value="">Select a retreat location</option>
+                                <option value="">Select</option>
                                 @foreach(['JJK Gurukulam, Trivandrum','Shanti Nilayam, Thrissur', 'Accommodation', 'Pilgrimage', 'Other'] as $location)
                                     <option value="{{ $location }}" @selected(old('retreat_location') === $location)>{{ $location }}</option>
                                 @endforeach
@@ -74,7 +74,7 @@
                             <label for="gender" class="block text-sm font-bold text-forest">Gender <span class="text-maroon">*</span></label>
                             <select id="gender" name="gender" class="mt-2 w-full rounded-xl border border-saffron/20 bg-white px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                                 <option value="">Select</option>
-                                @foreach(['Male','Female','Other','Prefer not to say'] as $gender)
+                                @foreach(['Male','Female','Other'] as $gender)
                                     <option value="{{ $gender }}" @selected(old('gender') === $gender)>{{ $gender }}</option>
                                 @endforeach
                             </select>

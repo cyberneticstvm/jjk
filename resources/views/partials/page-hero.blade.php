@@ -4,7 +4,7 @@
     <div class="container-site">
         <div class="max-w-3xl">
             <div class="mb-5 text-xs font-bold uppercase tracking-[.25em] text-gold">{{ $eyebrow }}</div>
-            <h1 class="font-serif text-5xl font-semibold leading-[.98] sm:text-7xl">{{ $title }}</h1>
+            <h1 class="font-serif text-5xl font-semibold leading-[.98] sm:text-5xl">{{ $title }}</h1>
             <p class="mt-6 max-w-2xl text-lg leading-8 text-white/80">{{ $intro }}</p>
         </div>
     </div>

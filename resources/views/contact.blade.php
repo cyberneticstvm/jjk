@@ -34,6 +34,17 @@
                     <p><strong class="text-maroon">From Trivandrum Airport:</strong> approximately 15 km</p>
                     <p><strong class="text-maroon">From Trivandrum Railway Station:</strong> approximately 8.5 km</p>
                 </div>
+
+                <div class="mt-7 overflow-hidden rounded-2xl border border-sandal bg-white">
+                    <div class="border-b border-sandal px-5 py-3 text-sm font-semibold text-forest">Find JJK Gurukulam</div>
+                    <iframe
+                        title="Map showing JJK Gurukulam"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.801708577482!2d76.9960388!3d8.5186241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05ba1af8a28dcd%3A0xe9202f4cf3f8d1c9!2sJanaka%20janani%20Kripa%20Gurukulam!5e0!3m2!1sen!2sin!4v1781929737230!5m2!1sen!2sin"
+                        class="block h-72 w-full border-0"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </article>
 
             <article class="card reveal !p-8 sm:!p-10">
@@ -55,6 +66,17 @@
                 <div class="mt-7 space-y-3 border-t border-sandal pt-6 text-sm">
                     <p><strong class="text-maroon">From Cochin Airport:</strong> approximately 1 hour 15 minutes</p>
                     <p><strong class="text-maroon">From Thrissur Railway Station:</strong> approximately 14 km</p>                    
+                </div>
+
+                <div class="mt-7 overflow-hidden rounded-2xl border border-sandal bg-white">
+                    <div class="border-b border-sandal px-5 py-3 text-sm font-semibold text-forest">Find Shanti Nilayam</div>
+                    <iframe
+                        title="Map showing Shanti Nilayam"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.5371968855306!2d76.1732455!3d10.4582512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7f3208ad9510b%3A0xb5a45665364f981d!2sShanti%20Nilayam%20-%20JJK%20Gurukulam%20Retreat%20Home!5e0!3m2!1sen!2sin!4v1781929772463!5m2!1sen!2sin"
+                        class="block h-72 w-full border-0"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </article>
         </div>
