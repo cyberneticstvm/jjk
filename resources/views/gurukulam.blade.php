@@ -2,7 +2,7 @@
 @section('title', 'Children’s Gurukulam in Thiruvananthapuram | JJK Gurukulam Trust')
 @section('description', 'Learn about JJK Gurukulam, its history, value-based education, daily schedule and nurturing home for underprivileged boys in Kerala.')
 @section('content')
-@include('partials.page-hero',['eyebrow'=>'JJK Children’s Gurukulam · Since 2006','title'=>'A nurturing home for learning and life.','intro'=>'Education, care and Indian values come together in a secure Gurukulam environment in Vattiyoorkavu, Thiruvananthapuram.','image'=>'images/inner-page-header.jpeg','alt'=>'Kerala paddy fields and coconut palms at sunset'])
+@include('partials.page-hero',['eyebrow'=>'JJK Children’s Gurukulam · Since 2006','titleHtml'=>'A nurturing home<br>for learning and life.','intro'=>'Education, care and Indian values come together in a secure Gurukulam environment in Vattiyoorkavu, Thiruvananthapuram.','image'=>'images/slider/Slider_2.jpg.jpeg','alt'=>'Kerala paddy fields and coconut palms at sunset'])
 <section class="py-24"><div class="container-site grid gap-14 lg:grid-cols-[1.15fr_.85fr]">
     <div class="reveal"><div class="eyebrow">The Gurukulam tradition</div><h2 class="section-title">Where teacher, student and values share one home.</h2><div class="prose-jjk mt-7">
         <p>A Gurukulam is a traditional place of learning where the teacher and students live together and study the scriptures. The word Guru means “teacher” and Kulam means “home”.</p>
@@ -31,7 +31,7 @@ We are located about 8.5 km from Thiruvananthapuram Railway Station. The nearest
 @foreach([['Formal Education','Children attend a nearby public school and receive dedicated English tuition.'],['Spiritual Learning','Sanskrit, Bhagavad Gita, Vishnu Sahasranamam and traditional Vedic chanting.'],['Healthy Living','Nutritious vegetarian meals, Hatha Yoga, play and a disciplined daily rhythm.'],['A Secure Home','Shelter, clothing, books, healthcare and compassionate guidance.'],['Family Connection','Regular contact with families and school holidays spent at home.'],['Character & Seva','Dharma, meditation, self-discipline and Karma Yoga in daily life.']] as $item)
 <div class="card reveal"><h3 class="text-2xl font-semibold text-forest">{{ $item[0] }}</h3><p class="mt-3 leading-7 text-ink/65">{{ $item[1] }}</p></div>@endforeach
 </div></div></section>
-<section class="py-24"><div class="container-site grid gap-14 lg:grid-cols-2"><div class="reveal"><h2 class="section-title">A day at JJK Gurukulam</h2></div><div class="reveal grid gap-0 overflow-hidden rounded-3xl border border-saffron/15 bg-white shadow-xl shadow-black/5">
+<section class="py-24"><div class="container-site grid gap-14 lg:grid-cols-2"><div class="reveal"><h5 class="section-title text-4xl">A day at JJK Gurukulam</h5></div><div class="reveal grid gap-0 overflow-hidden rounded-3xl border border-saffron/15 bg-white shadow-xl shadow-black/5">
 @foreach([['5:00 am','Wake up & bath'],['5:30 am','Hatha Yoga'],['6:00 am','Morning prayer'],['6:45 am','Karma Yoga'],['7:15 am','Study'],['8:15 am','Breakfast'],['9:00 am','School'],['3:30 pm','Return, tea & play'],['6:00 pm','Evening prayer & chanting'],['7:15 pm','Dinner'],['8:00 pm','Study'],['9:00 pm','Bedtime']] as $slot)
 <div class="grid grid-cols-[100px_1fr] border-b border-sandal px-6 py-3.5 last:border-0"><strong class="text-maroon">{{ $slot[0] }}</strong><span class="text-ink/70">{{ $slot[1] }}</span></div>@endforeach
 </div></div></section>

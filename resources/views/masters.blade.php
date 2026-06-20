@@ -5,7 +5,7 @@
 @include('partials.page-hero',[
     'eyebrow'=>'Guru–Shishya Parampara',
     'title'=>'Masters of wisdom.',
-    'intro'=>'Our work and teaching are guided by masters who unfolded the scriptures with authenticity, clarity, compassion and service.',
+    'introHtml'=>'Our work and teaching are guided by masters who unfolded the scriptures<br>with authenticity, clarity, compassion and service.',
     'image'=>'images/inner-page-header.jpeg',
     'alt'=>'Kerala paddy fields and coconut palms at sunset'
 ])

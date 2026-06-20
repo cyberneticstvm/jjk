@@ -15,7 +15,7 @@
     @foreach($heroSlides as $i => $slide)
     <article data-slide class="hero-slide {{ $i === 0 ? 'is-active' : '' }} absolute inset-0">
         <img src="{{ asset($slide[0]) }}" alt="{{ $slide[1] }}" class="h-full w-full object-cover" fetchpriority="{{ $i === 0 ? 'high' : 'auto' }}">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#102d25]/95 via-[#102d25]/70 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#102d25]/80 via-[#102d25]/60 to-transparent"></div>
         <div class="container-site absolute inset-x-0 top-1/2 -translate-y-1/2">
             <div class="max-w-3xl pt-14">
                 <div class="mb-5 text-xs font-bold uppercase tracking-[.3em] text-gold">Janaka Janani Kripa Gurukulam Trust</div>

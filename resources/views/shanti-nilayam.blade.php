@@ -5,7 +5,7 @@
 @include('partials.page-hero',[
     'eyebrow'=>'JJK Gurukulam Retreat Home · Thrissur',
     'title'=>'Shanti Nilayam.',
-    'intro'=>'A learning centre for traditional Yoga, Vedanta and Sanskrit in the peaceful village of Pallippuram, Kerala.',
+    'introHtml'=>'A learning centre for traditional Yoga, Vedanta and Sanskrit<br>in the peaceful village of Pallippuram, Kerala.',
     'image'=>'images/slider/Slider_1.jpg.jpeg',
     'alt'=>'Kerala paddy fields and coconut palms at sunset'
 ])

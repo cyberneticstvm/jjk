@@ -5,7 +5,7 @@
 @include('partials.page-hero',[
     'eyebrow'=>'What We Offer',
     'title'=>'Retreat at Shanti Nilayam.',
-    'intro'=>'A disciplined and peaceful Ashrama rhythm for Yoga, Vedanta, meditation, service and inner clarity.',
+    'introHtml'=>'A disciplined and peaceful Ashrama rhythm for Yoga, Vedanta, meditation,<br>service and inner clarity.',
     'image'=>'images/slider/Slider_1.jpg.jpeg',
     'alt'=>'Kerala paddy fields and coconut palms at sunset'
 ])

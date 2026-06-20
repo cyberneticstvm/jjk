@@ -4,10 +4,10 @@
 @section('content')
 @include('partials.page-hero',[
     'eyebrow'=>'What We Offer',
-    'title'=>'Pilgrimage and Yaatra.',
-    'intro'=>'Sacred journeys to holy places that support devotion, reflection, discipline and inner growth.',
-    'image'=>'images/inner-page-header.jpeg',
-    'alt'=>'Kerala paddy fields and coconut palms at sunset'
+    'title'=>'Pilgrimage.',
+    'introHtml'=>'Sacred journeys to holy places that support devotion, reflection,<br>discipline and inner growth.',
+    'image'=>'images/pilgrimage-kailas.webp',
+    'alt'=>'Mount Kailas rising above the Tibetan landscape'
 ])
 
 <section class="bg-forest py-24 text-white">
