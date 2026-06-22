@@ -6,8 +6,8 @@
     'eyebrow'=>'What We Offer',
     'title'=>'Pilgrimage.',
     'introHtml'=>'Sacred journeys to holy places that support devotion, reflection,<br>discipline and inner growth.',
-    'image'=>'images/pilgrimage-kailas.webp',
-    'alt'=>'Mount Kailas rising above the Tibetan landscape'
+    'image'=>'images/pilgrimage-mount-kailasa.png',
+    'alt'=>'Clear natural view of Mount Kailasa in the Himalayas'
 ])
 
 <section class="bg-forest py-24 text-white">

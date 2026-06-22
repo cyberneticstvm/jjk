@@ -6,8 +6,8 @@
     'eyebrow'=>'Gallery',
     'titleHtml'=>'Moments from<br>the Gurukulam.',
     'intro'=>'A living collection of photos from JJK Gurukulam, Shanti Nilayam, courses, retreats, seva activities and pilgrimages.',
-    'image'=>'images/inner-page-header.jpeg',
-    'alt'=>'Kerala paddy fields and coconut palms at sunset'
+    'image'=>'images/gallery-kerala-backwaters.png',
+    'alt'=>'Traditional houseboat on Kerala backwaters surrounded by coconut palms'
 ])
 
 <section class="py-24">
