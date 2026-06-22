@@ -6,7 +6,7 @@
     'eyebrow'=>'Guru–Shishya Parampara',
     'title'=>'Masters of Wisdom.',
     'introHtml'=>'Our work and teaching are guided by masters who unfolded the scriptures<br>with authenticity, clarity, compassion and service.',
-    'image'=>'images/inner-page-header.jpeg',
+    'image'=>'images/gurukulam-hero.png',
     'alt'=>'Kerala paddy fields and coconut palms at sunset'
 ])
 
