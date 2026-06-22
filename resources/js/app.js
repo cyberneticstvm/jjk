@@ -79,3 +79,38 @@ photoInput?.addEventListener('change', () => {
         fileName.textContent = photoInput.files?.[0]?.name ?? 'JPG, PNG or WebP, maximum 5 MB';
     }
 });
+
+const supportingDocumentsInput = document.querySelector('#supporting_documents');
+const supportingFilesName = document.querySelector('[data-supporting-files-name]');
+
+supportingDocumentsInput?.addEventListener('change', () => {
+    const files = [...(supportingDocumentsInput.files ?? [])];
+
+    if (!supportingFilesName) return;
+
+    if (!files.length) {
+        supportingFilesName.textContent = 'Optional: PDF, Word or image files, maximum 5 files / 10 MB each';
+    } else if (files.length === 1) {
+        supportingFilesName.textContent = files[0].name;
+    } else {
+        supportingFilesName.textContent = `${files.length} files selected: ${files.map((file) => file.name).join(', ')}`;
+    }
+});
+
+const applicationForm = document.querySelector('[data-application-form]');
+
+applicationForm?.addEventListener('submit', () => {
+    const submitButton = applicationForm.querySelector('[data-application-submit]');
+    const spinner = applicationForm.querySelector('[data-application-spinner]');
+    const label = applicationForm.querySelector('[data-application-submit-label]');
+
+    if (!submitButton || submitButton.disabled) return;
+
+    submitButton.disabled = true;
+    submitButton.setAttribute('aria-busy', 'true');
+    spinner?.classList.remove('hidden');
+
+    if (label) {
+        label.textContent = 'Submitting...';
+    }
+});
