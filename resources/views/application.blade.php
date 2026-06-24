@@ -35,7 +35,7 @@
                         <div class="md:col-span-2">
                             <label for="retreat_location" class="block text-sm font-bold text-forest">Location <span class="text-maroon">*</span></label>
                             <select id="retreat_location" name="retreat_location" data-location-select class="mt-2 w-full rounded-xl border border-saffron/20 bg-white px-4 py-3 text-ink outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
-                                <option value="">Select a retreat location</option>
+                                <option value="">Select</option>
                                 @foreach(['JJK Gurukulam, Trivandrum','Shanti Nilayam, Thrissur', 'Himalaya', 'Accommodation', 'Pilgrimage', 'Other'] as $location)
                                     <option value="{{ $location }}" @selected(old('retreat_location') === $location)>{{ $location }}</option>
                                 @endforeach
@@ -45,18 +45,18 @@
 
                         <div data-other-location class="{{ old('retreat_location') === 'Other' ? '' : 'hidden' }} md:col-span-2">
                             <label for="other_location" class="block text-sm font-bold text-forest">Please specify the location <span class="text-maroon">*</span></label>
-                            <input id="other_location" name="other_location" type="text" value="{{ old('other_location') }}" placeholder="Enter the retreat location" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
+                            <input id="other_location" name="other_location" type="text" value="{{ old('other_location') }}" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
                             @error('other_location')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
 
                         <div>
                             <label for="from_date" class="block text-sm font-bold text-forest">From Date <span class="text-maroon">*</span></label>
-                            <input id="from_date" name="from_date" type="date" value="{{ old('from_date') }}" placeholder="Select arrival date" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="from_date" name="from_date" type="date" value="{{ old('from_date') }}" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('from_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="to_date" class="block text-sm font-bold text-forest">To Date <span class="text-maroon">*</span></label>
-                            <input id="to_date" name="to_date" type="date" value="{{ old('to_date') }}" placeholder="Select departure date" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="to_date" name="to_date" type="date" value="{{ old('to_date') }}" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('to_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                     </div>
@@ -67,13 +67,13 @@
                     <div class="mt-5 grid gap-6 md:grid-cols-2">
                         <div class="md:col-span-2">
                             <label for="name" class="block text-sm font-bold text-forest">Full name <span class="text-maroon">*</span></label>
-                            <input id="name" name="name" type="text" value="{{ old('name') }}" placeholder="Enter your full name" autocomplete="name" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="name" name="name" type="text" value="{{ old('name') }}" autocomplete="name" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('name')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="gender" class="block text-sm font-bold text-forest">Gender <span class="text-maroon">*</span></label>
                             <select id="gender" name="gender" class="mt-2 w-full rounded-xl border border-saffron/20 bg-white px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
-                                <option value="">Select your gender</option>
+                                <option value="">Select</option>
                                 @foreach(['Male','Female','Other'] as $gender)
                                     <option value="{{ $gender }}" @selected(old('gender') === $gender)>{{ $gender }}</option>
                                 @endforeach
@@ -82,52 +82,52 @@
                         </div>
                         <div>
                             <label for="date_of_birth" class="block text-sm font-bold text-forest">Date of birth <span class="text-maroon">*</span></label>
-                            <input id="date_of_birth" name="date_of_birth" type="date" value="{{ old('date_of_birth') }}" placeholder="Select your date of birth" autocomplete="bday" max="{{ now()->subDay()->format('Y-m-d') }}" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="date_of_birth" name="date_of_birth" type="date" value="{{ old('date_of_birth') }}" autocomplete="bday" max="{{ now()->subDay()->format('Y-m-d') }}" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('date_of_birth')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div class="md:col-span-2">
                             <label for="address" class="block text-sm font-bold text-forest">Address <span class="text-maroon">*</span></label>
-                            <textarea id="address" name="address" rows="3" placeholder="House number, street, locality" autocomplete="street-address" maxlength="1000" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>{{ old('address') }}</textarea>
+                            <textarea id="address" name="address" rows="3" autocomplete="street-address" maxlength="1000" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>{{ old('address') }}</textarea>
                             @error('address')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="state" class="block text-sm font-bold text-forest">State / Province <span class="text-maroon">*</span></label>
-                            <input id="state" name="state" type="text" value="{{ old('state') }}" placeholder="e.g. Kerala" autocomplete="address-level1" maxlength="100" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="state" name="state" type="text" value="{{ old('state') }}" autocomplete="address-level1" maxlength="100" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('state')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="country" class="block text-sm font-bold text-forest">Country <span class="text-maroon">*</span></label>
-                            <input id="country" name="country" type="text" value="{{ old('country') }}" placeholder="e.g. India" autocomplete="country-name" maxlength="100" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="country" name="country" type="text" value="{{ old('country') }}" autocomplete="country-name" maxlength="100" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('country')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="zip_code" class="block text-sm font-bold text-forest">ZIP / Postal code <span class="text-maroon">*</span></label>
-                            <input id="zip_code" name="zip_code" type="text" value="{{ old('zip_code') }}" placeholder="e.g. 695013" autocomplete="postal-code" maxlength="20" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="zip_code" name="zip_code" type="text" value="{{ old('zip_code') }}" autocomplete="postal-code" maxlength="20" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('zip_code')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="occupation" class="block text-sm font-bold text-forest">Occupation</label>
-                            <input id="occupation" name="occupation" type="text" value="{{ old('occupation') }}" placeholder="e.g. Teacher, student or retired" autocomplete="organization-title" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
+                            <input id="occupation" name="occupation" type="text" value="{{ old('occupation') }}" autocomplete="organization-title" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
                             @error('occupation')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="telephone_home" class="block text-sm font-bold text-forest">Telephone (Home)</label>
-                            <input id="telephone_home" name="telephone_home" type="tel" value="{{ old('telephone_home') }}" placeholder="e.g. +91 471 1234567" autocomplete="tel" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
+                            <input id="telephone_home" name="telephone_home" type="tel" value="{{ old('telephone_home') }}" autocomplete="tel" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
                             @error('telephone_home')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="telephone_work" class="block text-sm font-bold text-forest">Telephone (Work)</label>
-                            <input id="telephone_work" name="telephone_work" type="tel" value="{{ old('telephone_work') }}" placeholder="e.g. +91 471 1234567" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
+                            <input id="telephone_work" name="telephone_work" type="tel" value="{{ old('telephone_work') }}" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
                             @error('telephone_work')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="mobile_phone" class="block text-sm font-bold text-forest">Mobile phone <span class="text-maroon">*</span></label>
-                            <input id="mobile_phone" name="mobile_phone" type="tel" value="{{ old('mobile_phone') }}" placeholder="e.g. +91 9446177085" autocomplete="tel" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="mobile_phone" name="mobile_phone" type="tel" value="{{ old('mobile_phone') }}" autocomplete="tel" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('mobile_phone')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-bold text-forest">Email address <span class="text-maroon">*</span></label>
-                            <input id="email" name="email" type="email" value="{{ old('email') }}" placeholder="you@example.com" autocomplete="email" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="email" name="email" type="email" value="{{ old('email') }}" autocomplete="email" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('email')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                     </div>
@@ -139,12 +139,12 @@
                     <div class="mt-6 grid gap-6">
                         <div>
                             <label for="illnesses" class="block text-sm font-bold text-forest">Illnesses or health conditions</label>
-                            <textarea id="illnesses" name="illnesses" rows="3" placeholder="List relevant conditions, allergies or write None" maxlength="1000" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">{{ old('illnesses') }}</textarea>
+                            <textarea id="illnesses" name="illnesses" rows="3" maxlength="1000" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">{{ old('illnesses') }}</textarea>
                             @error('illnesses')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="prescribed_medication" class="block text-sm font-bold text-forest">Prescribed medication</label>
-                            <textarea id="prescribed_medication" name="prescribed_medication" rows="3" placeholder="List medication and dosage, or write None" maxlength="1000" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">{{ old('prescribed_medication') }}</textarea>
+                            <textarea id="prescribed_medication" name="prescribed_medication" rows="3" maxlength="1000" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">{{ old('prescribed_medication') }}</textarea>
                             @error('prescribed_medication')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                     </div>
@@ -155,32 +155,32 @@
                     <div class="mt-5 grid gap-6 md:grid-cols-2">
                         <div class="md:col-span-2">
                             <label for="emergency_name" class="block text-sm font-bold text-forest">Contact name <span class="text-maroon">*</span></label>
-                            <input id="emergency_name" name="emergency_name" type="text" value="{{ old('emergency_name') }}" placeholder="Enter emergency contact's full name" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="emergency_name" name="emergency_name" type="text" value="{{ old('emergency_name') }}" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('emergency_name')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div class="md:col-span-2">
                             <label for="emergency_address" class="block text-sm font-bold text-forest">Address <span class="text-maroon">*</span></label>
-                            <textarea id="emergency_address" name="emergency_address" rows="3" placeholder="House number, street, city and postal code" maxlength="1000" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>{{ old('emergency_address') }}</textarea>
+                            <textarea id="emergency_address" name="emergency_address" rows="3" maxlength="1000" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>{{ old('emergency_address') }}</textarea>
                             @error('emergency_address')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="emergency_email" class="block text-sm font-bold text-forest">Email</label>
-                            <input id="emergency_email" name="emergency_email" type="email" value="{{ old('emergency_email') }}" placeholder="contact@example.com" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
+                            <input id="emergency_email" name="emergency_email" type="email" value="{{ old('emergency_email') }}" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
                             @error('emergency_email')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="emergency_relationship" class="block text-sm font-bold text-forest">Relationship <span class="text-maroon">*</span></label>
-                            <input id="emergency_relationship" name="emergency_relationship" type="text" value="{{ old('emergency_relationship') }}" placeholder="e.g. Parent, spouse or sibling" maxlength="100" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="emergency_relationship" name="emergency_relationship" type="text" value="{{ old('emergency_relationship') }}" maxlength="100" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('emergency_relationship')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="emergency_mobile" class="block text-sm font-bold text-forest">Mobile phone <span class="text-maroon">*</span></label>
-                            <input id="emergency_mobile" name="emergency_mobile" type="tel" value="{{ old('emergency_mobile') }}" placeholder="e.g. +91 9446177085" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="emergency_mobile" name="emergency_mobile" type="tel" value="{{ old('emergency_mobile') }}" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('emergency_mobile')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="emergency_landline" class="block text-sm font-bold text-forest">Landline</label>
-                            <input id="emergency_landline" name="emergency_landline" type="tel" value="{{ old('emergency_landline') }}" placeholder="e.g. +91 471 1234567" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
+                            <input id="emergency_landline" name="emergency_landline" type="tel" value="{{ old('emergency_landline') }}" maxlength="30" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">
                             @error('emergency_landline')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                     <div class="mt-5 grid gap-6">
                         <div>
                             <label for="yoga_experience" class="block text-sm font-bold text-forest">Length of time practicing Yoga</label>
-                            <textarea id="yoga_experience" name="yoga_experience" rows="3" placeholder="e.g. Practising Hatha Yoga for two years" maxlength="500" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">{{ old('yoga_experience') }}</textarea>
+                            <textarea id="yoga_experience" name="yoga_experience" rows="3" maxlength="500" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20">{{ old('yoga_experience') }}</textarea>
                             @error('yoga_experience')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
 
@@ -221,12 +221,12 @@
                         <div class="grid gap-6 md:grid-cols-2">
                             <div>
                                 <label for="signature" class="block text-sm font-bold text-forest">Signature (type your full name) <span class="text-maroon">*</span></label>
-                            <input id="signature" name="signature" type="text" value="{{ old('signature') }}" placeholder="Type your full name" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 font-serif text-xl italic outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                                <input id="signature" name="signature" type="text" value="{{ old('signature') }}" maxlength="150" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 font-serif text-xl italic outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                                 @error('signature')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                             </div>
                             <div>
                                 <label for="signature_date" class="block text-sm font-bold text-forest">Date <span class="text-maroon">*</span></label>
-                                <input id="signature_date" name="signature_date" type="date" value="{{ old('signature_date', now()->format('Y-m-d')) }}" placeholder="Select the date" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                                <input id="signature_date" name="signature_date" type="date" value="{{ old('signature_date', now()->format('Y-m-d')) }}" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                                 @error('signature_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                             </div>
                         </div>
