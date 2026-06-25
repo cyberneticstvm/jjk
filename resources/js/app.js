@@ -117,6 +117,15 @@ function displayDateToIsoDate(value) {
     return day && month && year ? `${year}-${month}-${day}` : '';
 }
 
+function openDatePicker(picker) {
+    if (typeof picker.showPicker === 'function') {
+        picker.showPicker();
+    } else {
+        picker.focus();
+        picker.click();
+    }
+}
+
 document.querySelectorAll('[data-date-picker]').forEach((picker) => {
     const input = document.getElementById(picker.dataset.dateTarget);
 
@@ -134,12 +143,14 @@ document.querySelectorAll('[data-date-picker]').forEach((picker) => {
         input.value = isoDateToDisplayDate(picker.value);
         input.dispatchEvent(new Event('input', { bubbles: true }));
     });
+});
 
-    input.addEventListener('click', () => {
-        if (typeof picker.showPicker === 'function') {
-            picker.showPicker();
-        } else {
-            picker.focus();
+document.querySelectorAll('[data-date-trigger]').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+        const picker = document.querySelector(`[data-date-picker][data-date-target="${trigger.dataset.dateTarget}"]`);
+
+        if (picker) {
+            openDatePicker(picker);
         }
     });
 });

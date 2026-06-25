@@ -65,18 +65,22 @@
                         <div>
                             <label for="from_date" class="block text-sm font-bold text-forest">From Date <span class="text-maroon">*</span></label>
                             <div class="relative mt-2">
-                                <input id="from_date" name="from_date" type="text" value="{{ old('from_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="w-full rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
-                                <input type="date" value="{{ $datePickerValue(old('from_date')) }}" data-date-picker data-date-target="from_date" aria-label="Select from date" class="absolute inset-0 h-full w-full cursor-pointer opacity-0">
-                                <svg class="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                                <input id="from_date" name="from_date" type="text" value="{{ old('from_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input data-date-trigger data-date-target="from_date" class="w-full cursor-pointer rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
+                                <input type="date" value="{{ $datePickerValue(old('from_date')) }}" data-date-picker data-date-target="from_date" aria-label="Select from date" tabindex="-1" class="absolute right-3 top-1/2 h-8 w-8 -translate-y-1/2 opacity-0">
+                                <button type="button" data-date-trigger data-date-target="from_date" aria-label="Open from date calendar" class="absolute right-2 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full text-maroon transition hover:bg-sandal/60 focus:outline-none focus:ring-2 focus:ring-saffron/30">
+                                    <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                                </button>
                             </div>
                             @error('from_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="to_date" class="block text-sm font-bold text-forest">To Date <span class="text-maroon">*</span></label>
                             <div class="relative mt-2">
-                                <input id="to_date" name="to_date" type="text" value="{{ old('to_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="w-full rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
-                                <input type="date" value="{{ $datePickerValue(old('to_date')) }}" data-date-picker data-date-target="to_date" aria-label="Select to date" class="absolute inset-0 h-full w-full cursor-pointer opacity-0">
-                                <svg class="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                                <input id="to_date" name="to_date" type="text" value="{{ old('to_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input data-date-trigger data-date-target="to_date" class="w-full cursor-pointer rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
+                                <input type="date" value="{{ $datePickerValue(old('to_date')) }}" data-date-picker data-date-target="to_date" aria-label="Select to date" tabindex="-1" class="absolute right-3 top-1/2 h-8 w-8 -translate-y-1/2 opacity-0">
+                                <button type="button" data-date-trigger data-date-target="to_date" aria-label="Open to date calendar" class="absolute right-2 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full text-maroon transition hover:bg-sandal/60 focus:outline-none focus:ring-2 focus:ring-saffron/30">
+                                    <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                                </button>
                             </div>
                             @error('to_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
@@ -104,9 +108,11 @@
                         <div>
                             <label for="date_of_birth" class="block text-sm font-bold text-forest">Date of birth <span class="text-maroon">*</span></label>
                             <div class="relative mt-2">
-                                <input id="date_of_birth" name="date_of_birth" type="text" value="{{ old('date_of_birth') }}" autocomplete="bday" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="w-full rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
-                                <input type="date" value="{{ $datePickerValue(old('date_of_birth')) }}" max="{{ now()->subDay()->format('Y-m-d') }}" data-date-picker data-date-target="date_of_birth" aria-label="Select date of birth" class="absolute inset-0 h-full w-full cursor-pointer opacity-0">
-                                <svg class="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                                <input id="date_of_birth" name="date_of_birth" type="text" value="{{ old('date_of_birth') }}" autocomplete="bday" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input data-date-trigger data-date-target="date_of_birth" class="w-full cursor-pointer rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
+                                <input type="date" value="{{ $datePickerValue(old('date_of_birth')) }}" max="{{ now()->subDay()->format('Y-m-d') }}" data-date-picker data-date-target="date_of_birth" aria-label="Select date of birth" tabindex="-1" class="absolute right-3 top-1/2 h-8 w-8 -translate-y-1/2 opacity-0">
+                                <button type="button" data-date-trigger data-date-target="date_of_birth" aria-label="Open date of birth calendar" class="absolute right-2 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full text-maroon transition hover:bg-sandal/60 focus:outline-none focus:ring-2 focus:ring-saffron/30">
+                                    <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                                </button>
                             </div>
                             @error('date_of_birth')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
@@ -252,9 +258,11 @@
                             <div>
                                 <label for="signature_date" class="block text-sm font-bold text-forest">Date <span class="text-maroon">*</span></label>
                                 <div class="relative mt-2">
-                                    <input id="signature_date" name="signature_date" type="text" value="{{ old('signature_date', now()->format('d-m-Y')) }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="w-full rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
-                                    <input type="date" value="{{ $datePickerValue(old('signature_date', now()->format('d-m-Y'))) }}" data-date-picker data-date-target="signature_date" aria-label="Select signature date" class="absolute inset-0 h-full w-full cursor-pointer opacity-0">
-                                    <svg class="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                                    <input id="signature_date" name="signature_date" type="text" value="{{ old('signature_date', now()->format('d-m-Y')) }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input data-date-trigger data-date-target="signature_date" class="w-full cursor-pointer rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
+                                    <input type="date" value="{{ $datePickerValue(old('signature_date', now()->format('d-m-Y'))) }}" data-date-picker data-date-target="signature_date" aria-label="Select signature date" tabindex="-1" class="absolute right-3 top-1/2 h-8 w-8 -translate-y-1/2 opacity-0">
+                                    <button type="button" data-date-trigger data-date-target="signature_date" aria-label="Open signature date calendar" class="absolute right-2 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full text-maroon transition hover:bg-sandal/60 focus:outline-none focus:ring-2 focus:ring-saffron/30">
+                                        <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                                    </button>
                                 </div>
                                 @error('signature_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                             </div>
