@@ -6,7 +6,7 @@
     'eyebrow'=>'What We Offer',
     'title'=>'Pilgrimage.',
     'introHtml'=>'Sacred journeys to holy places that support devotion, reflection,<br>discipline and inner growth.',
-    'image'=>'images/pilgrimage-mount-kailasa.png',
+    'image'=>'images/pilgrimage-kailas.webp',
     'alt'=>'Clear natural view of Mount Kailasa in the Himalayas'
 ])
 
