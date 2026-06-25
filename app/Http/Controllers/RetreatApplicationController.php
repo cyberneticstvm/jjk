@@ -23,7 +23,6 @@ class RetreatApplicationController extends Controller
         $locations = [
             'JJK Gurukulam, Trivandrum',
             'Shanti Nilayam, Thrissur',
-            'Himalaya',
             'Accommodation',
             'Pilgrimage',
             'Other',

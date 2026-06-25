@@ -17,7 +17,7 @@ class RetreatApplicationTest extends TestCase
             ->assertSee('Application.')
             ->assertSee('JJK Gurukulam, Trivandrum')
             ->assertSee('Shanti Nilayam, Thrissur')
-            ->assertSee('Himalaya');
+            ->assertDontSee('Himalaya');
     }
 
     public function test_valid_application_is_emailed_with_applicant_details(): void
@@ -87,7 +87,7 @@ class RetreatApplicationTest extends TestCase
     public function test_application_requires_a_photo_and_valid_date_range(): void
     {
         $this->post('/retreat-application', [
-            'retreat_location' => 'Himalaya',
+            'retreat_location' => 'Shanti Nilayam, Thrissur',
             'from_date' => '10-08-2026',
             'to_date' => '01-08-2026',
         ])->assertSessionHasErrors([
