@@ -105,6 +105,45 @@ document.querySelectorAll('[data-date-input]').forEach((input) => {
     });
 });
 
+function isoDateToDisplayDate(value) {
+    const [year, month, day] = value.split('-');
+
+    return year && month && day ? `${day}-${month}-${year}` : '';
+}
+
+function displayDateToIsoDate(value) {
+    const [day, month, year] = value.split('-');
+
+    return day && month && year ? `${year}-${month}-${day}` : '';
+}
+
+document.querySelectorAll('[data-date-picker]').forEach((picker) => {
+    const input = document.getElementById(picker.dataset.dateTarget);
+
+    if (!input) return;
+
+    if (input.value && !picker.value) {
+        picker.value = displayDateToIsoDate(input.value);
+    }
+
+    if (picker.value) {
+        input.value = isoDateToDisplayDate(picker.value);
+    }
+
+    picker.addEventListener('change', () => {
+        input.value = isoDateToDisplayDate(picker.value);
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+
+    input.addEventListener('click', () => {
+        if (typeof picker.showPicker === 'function') {
+            picker.showPicker();
+        } else {
+            picker.focus();
+        }
+    });
+});
+
 const applicationForm = document.querySelector('[data-application-form]');
 
 applicationForm?.addEventListener('submit', () => {

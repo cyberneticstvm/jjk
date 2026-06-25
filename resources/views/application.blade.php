@@ -2,6 +2,19 @@
 @section('title', 'Retreat Application Form | JJK Gurukulam')
 @section('description', 'Apply for a Yoga, Sanskrit and Vedanta retreat at Shanti Nilayam or a JJK Gurukulam spiritual program.')
 @section('content')
+@php
+    $datePickerValue = function ($value) {
+        if (! filled($value)) {
+            return '';
+        }
+
+        try {
+            return \Illuminate\Support\Carbon::createFromFormat('d-m-Y', $value)->format('Y-m-d');
+        } catch (\Throwable $exception) {
+            return \Illuminate\Support\Carbon::parse($value)->format('Y-m-d');
+        }
+    };
+@endphp
 @include('partials.page-hero',[
     'eyebrow'=>'Sanskrit · Yoga · Vedanta',
     'title'=>'Application.',
@@ -51,12 +64,20 @@
 
                         <div>
                             <label for="from_date" class="block text-sm font-bold text-forest">From Date <span class="text-maroon">*</span></label>
-                            <input id="from_date" name="from_date" type="text" value="{{ old('from_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <div class="relative mt-2">
+                                <input id="from_date" name="from_date" type="text" value="{{ old('from_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="w-full rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
+                                <input type="date" value="{{ $datePickerValue(old('from_date')) }}" data-date-picker data-date-target="from_date" aria-label="Select from date" class="absolute inset-0 h-full w-full cursor-pointer opacity-0">
+                                <svg class="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                            </div>
                             @error('from_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="to_date" class="block text-sm font-bold text-forest">To Date <span class="text-maroon">*</span></label>
-                            <input id="to_date" name="to_date" type="text" value="{{ old('to_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <div class="relative mt-2">
+                                <input id="to_date" name="to_date" type="text" value="{{ old('to_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="w-full rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
+                                <input type="date" value="{{ $datePickerValue(old('to_date')) }}" data-date-picker data-date-target="to_date" aria-label="Select to date" class="absolute inset-0 h-full w-full cursor-pointer opacity-0">
+                                <svg class="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                            </div>
                             @error('to_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                     </div>
@@ -82,7 +103,11 @@
                         </div>
                         <div>
                             <label for="date_of_birth" class="block text-sm font-bold text-forest">Date of birth <span class="text-maroon">*</span></label>
-                            <input id="date_of_birth" name="date_of_birth" type="text" value="{{ old('date_of_birth') }}" autocomplete="bday" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <div class="relative mt-2">
+                                <input id="date_of_birth" name="date_of_birth" type="text" value="{{ old('date_of_birth') }}" autocomplete="bday" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="w-full rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
+                                <input type="date" value="{{ $datePickerValue(old('date_of_birth')) }}" max="{{ now()->subDay()->format('Y-m-d') }}" data-date-picker data-date-target="date_of_birth" aria-label="Select date of birth" class="absolute inset-0 h-full w-full cursor-pointer opacity-0">
+                                <svg class="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                            </div>
                             @error('date_of_birth')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div class="md:col-span-2">
@@ -226,7 +251,11 @@
                             </div>
                             <div>
                                 <label for="signature_date" class="block text-sm font-bold text-forest">Date <span class="text-maroon">*</span></label>
-                                <input id="signature_date" name="signature_date" type="text" value="{{ old('signature_date', now()->format('d-m-Y')) }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                                <div class="relative mt-2">
+                                    <input id="signature_date" name="signature_date" type="text" value="{{ old('signature_date', now()->format('d-m-Y')) }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="w-full rounded-xl border border-saffron/20 px-4 py-3 pr-12 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" readonly required>
+                                    <input type="date" value="{{ $datePickerValue(old('signature_date', now()->format('d-m-Y'))) }}" data-date-picker data-date-target="signature_date" aria-label="Select signature date" class="absolute inset-0 h-full w-full cursor-pointer opacity-0">
+                                    <svg class="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/></svg>
+                                </div>
                                 @error('signature_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                             </div>
                         </div>
