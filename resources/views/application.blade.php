@@ -36,7 +36,7 @@
                             <label for="retreat_location" class="block text-sm font-bold text-forest">Location <span class="text-maroon">*</span></label>
                             <select id="retreat_location" name="retreat_location" data-location-select class="mt-2 w-full rounded-xl border border-saffron/20 bg-white px-4 py-3 text-ink outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                                 <option value="">Select</option>
-                                @foreach(['JJK Gurukulam, Trivandrum','Shanti Nilayam, Thrissur', 'Accommodation', 'Pilgrimage', 'Other'] as $location)
+                                @foreach(['JJK Gurukulam, Trivandrum','Shanti Nilayam, Thrissur', 'Himalaya', 'Accommodation', 'Pilgrimage', 'Other'] as $location)
                                     <option value="{{ $location }}" @selected(old('retreat_location') === $location)>{{ $location }}</option>
                                 @endforeach
                             </select>
@@ -51,12 +51,12 @@
 
                         <div>
                             <label for="from_date" class="block text-sm font-bold text-forest">From Date <span class="text-maroon">*</span></label>
-                            <input id="from_date" name="from_date" type="date" value="{{ old('from_date') }}" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="from_date" name="from_date" type="text" value="{{ old('from_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('from_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div>
                             <label for="to_date" class="block text-sm font-bold text-forest">To Date <span class="text-maroon">*</span></label>
-                            <input id="to_date" name="to_date" type="date" value="{{ old('to_date') }}" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="to_date" name="to_date" type="text" value="{{ old('to_date') }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('to_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                         </div>
                         <div>
                             <label for="date_of_birth" class="block text-sm font-bold text-forest">Date of birth <span class="text-maroon">*</span></label>
-                            <input id="date_of_birth" name="date_of_birth" type="date" value="{{ old('date_of_birth') }}" autocomplete="bday" max="{{ now()->subDay()->format('Y-m-d') }}" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                            <input id="date_of_birth" name="date_of_birth" type="text" value="{{ old('date_of_birth') }}" autocomplete="bday" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                             @error('date_of_birth')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                         </div>
                         <div class="md:col-span-2">
@@ -226,7 +226,7 @@
                             </div>
                             <div>
                                 <label for="signature_date" class="block text-sm font-bold text-forest">Date <span class="text-maroon">*</span></label>
-                                <input id="signature_date" name="signature_date" type="date" value="{{ old('signature_date', now()->format('Y-m-d')) }}" class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
+                                <input id="signature_date" name="signature_date" type="text" value="{{ old('signature_date', now()->format('d-m-Y')) }}" inputmode="numeric" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" data-date-input class="mt-2 w-full rounded-xl border border-saffron/20 px-4 py-3 outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/20" required>
                                 @error('signature_date')<p class="mt-2 text-sm text-red-700">{{ $message }}</p>@enderror
                             </div>
                         </div>

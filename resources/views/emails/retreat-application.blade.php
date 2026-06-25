@@ -14,17 +14,29 @@
 
         <div style="background:#fff;padding:28px;border-radius:0 0 16px 16px;">
             @php
+                $formatDate = function ($value) {
+                    if (! filled($value)) {
+                        return null;
+                    }
+
+                    try {
+                        return \Illuminate\Support\Carbon::createFromFormat('d-m-Y', $value)->format('d-m-Y');
+                    } catch (\Throwable $exception) {
+                        return \Illuminate\Support\Carbon::parse($value)->format('d-m-Y');
+                    }
+                };
+
                 $sections = [
                     'Retreat details' => [
                         'Retreat location' => $application['retreat_location'],
                         'Other location' => $application['other_location'] ?? null,
-                        'From date' => date("d-m-Y", strtotime($application['from_date'])),
-                        'To date' => date("d-m-Y", strtotime($application['to_date'])),
+                        'From date' => $formatDate($application['from_date']),
+                        'To date' => $formatDate($application['to_date']),
                     ],
                     'Applicant details' => [
                         'Full name' => $application['name'],
                         'Gender' => $application['gender'],
-                        'Date of birth' => date("d-m-Y", strtotime($application['date_of_birth'])),
+                        'Date of birth' => $formatDate($application['date_of_birth']),
                         'Address' => $application['address'],
                         'State / Province' => $application['state'],
                         'Country' => $application['country'],
@@ -50,7 +62,7 @@
                     'Experience & declaration' => [
                         'Yoga experience' => $application['yoga_experience'] ?? null,
                         'Signature' => $application['signature'],
-                        'Signature date' => $application['signature_date'],
+                        'Signature date' => $formatDate($application['signature_date']),
                     ],
                 ];
             @endphp

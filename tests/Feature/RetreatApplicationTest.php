@@ -35,11 +35,11 @@ class RetreatApplicationTest extends TestCase
         $response = $this->post('/retreat-application', [
             'retreat_location' => 'Shanti Nilayam, Thrissur',
             'other_location' => null,
-            'from_date' => now()->addMonth()->format('Y-m-d'),
-            'to_date' => now()->addMonth()->addDays(10)->format('Y-m-d'),
+            'from_date' => now()->addMonth()->format('d-m-Y'),
+            'to_date' => now()->addMonth()->addDays(10)->format('d-m-Y'),
             'name' => 'Test Applicant',
             'gender' => 'Female',
-            'date_of_birth' => '1990-01-01',
+            'date_of_birth' => '01-01-1990',
             'address' => '123 Test Street',
             'state' => 'Kerala',
             'country' => 'India',
@@ -59,7 +59,7 @@ class RetreatApplicationTest extends TestCase
             'emergency_relationship' => 'Sibling',
             'yoga_experience' => 'Two years',
             'signature' => 'Test Applicant',
-            'signature_date' => now()->format('Y-m-d'),
+            'signature_date' => now()->format('d-m-Y'),
             'applicant_photo' => $photo,
             'supporting_documents' => [$document],
             'declaration' => '1',
@@ -88,8 +88,8 @@ class RetreatApplicationTest extends TestCase
     {
         $this->post('/retreat-application', [
             'retreat_location' => 'Himalaya',
-            'from_date' => '2026-08-10',
-            'to_date' => '2026-08-01',
+            'from_date' => '10-08-2026',
+            'to_date' => '01-08-2026',
         ])->assertSessionHasErrors([
             'to_date',
             'name',
