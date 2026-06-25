@@ -18,13 +18,13 @@
                     'Retreat details' => [
                         'Retreat location' => $application['retreat_location'],
                         'Other location' => $application['other_location'] ?? null,
-                        'From date' => $application['from_date'],
-                        'To date' => $application['to_date'],
+                        'From date' => date("d-m-Y", strtotime($application['from_date'])),
+                        'To date' => date("d-m-Y", strtotime($application['to_date'])),
                     ],
                     'Applicant details' => [
                         'Full name' => $application['name'],
                         'Gender' => $application['gender'],
-                        'Date of birth' => $application['date_of_birth'],
+                        'Date of birth' => date("d-m-Y", strtotime($application['date_of_birth'])),
                         'Address' => $application['address'],
                         'State / Province' => $application['state'],
                         'Country' => $application['country'],
